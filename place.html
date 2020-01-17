@@ -217,11 +217,47 @@ integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIpt
     var map = L.map('map',{
     center: [39.7803, -89.6492],
     zoom: 8
+    layers: [prehistoric, historic]
+
     });
 
     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
+    
+   var greenIcon = new L.Icon({
+  		iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+ 		shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+  		iconSize: [25, 41],
+  		iconAnchor: [12, 41],
+  		popupAnchor: [1, -34],
+  		shadowSize: [41, 41]
+		});
+	var orangeIcon = new L.Icon({
+  		iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png',
+ 		shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+  		iconSize: [25, 41],
+  		iconAnchor: [12, 41],
+  		popupAnchor: [1, -34],
+  		shadowSize: [41, 41]
+		});
+		
+var prehistoric = new L.LayerGroup();
+				    
+	L.marker([39.793832, -89.657101], {icon: violetIcon}).bindPopup('<b>Orchard:</b><br>While there are still orchards on campus today, historically MSU had orchards north of the Red Cedar River, near the location of Snyder-Phillips dormitory today. The archival records show that there many different types of fruit trees planted on campus, but there was a specific mention of a pear orchard in 1863! <a href="production.html">Learn more!</a><br> <img src="img/orchard.jpg" alt="orchard - Image courtesy of Michigan State University Archives and Historical Collections" style="width:100%"><br><i>Image courtesy of Michigan State University Archives and Historical Collections.</i>').addTo(production),
+		
+var historic = new L.LayerGroup();
+	L.marker([39.725212, -89.678393], {icon: yellowIcon}).bindPopup('<b>Fishing:</b><br>Just as you can fish in the Red Cedar River today, we have uncovered several historical accounts of fishing on campus. One account from the diary of A. B. Morse, found at the MSU Archives talks about how he went fishing for the first time, and caught three fish. While we do not know for sure that this took place on campus, it is possible that he walked down to the river on campus for his first fishing experience. Archaeologically, we have uncovered a lot of fish bone through our campus excavations, especially in the privy associated with Saint’s Rest, the first dormitory on campus. <a href="production.html">Learn more!</a><br><img src="img/redcedarriver.jpg" alt="Red Cedar River - Image courtesy of Michigan State University Archives and Historical Collections" style="width:100%"><br><i>Image courtesy of Michigan State University Archives and Historical Collections.</i>').addTo(acquisition);
+	
+	var baseLayers = {
+		"Grayscale": grayscale,
+		"Streets": streets
+	};
+	var overlays = {
+		"Prehistoric": prehistoric,
+		"Historic": historic
+	};
+	L.control.layers(baseLayers, overlays).addTo(map);
 
 </script>
 </div></center>
