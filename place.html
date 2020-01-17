@@ -39,7 +39,7 @@ integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIpt
 #map {
     width: 500px;
     height:500px;
-    position:"fixed";
+    position:"static";
     </style>
 
 </head>
@@ -204,7 +204,7 @@ integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIpt
 				<div class="col-md-12">
 					<div class="block">
 						<div class="block-heading">
-							<h2>MORE COMING SOON*****</h2>
+							<h2>MORE COMING SOON</h2>
 							<p>The Place page will discuss where archaeological sites are and the variety of types of archaeological sites. This page will include a map with public archaeological sites in Illinois with pop-ups with short descriptions and a photo. An emphasis will be placed on archaeological sites near Springfield, IL to showcase that the students are surrounded by archaeology. Ten historic and ten prehistoric sites will be highlighted (and include an option to filter by site type).</p>
 						</div>	
 					</div>	<!-- End of /.block --> 
@@ -221,7 +221,7 @@ integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIpt
 
     var map = L.map('map',{
     center: [39.7803, -89.6492],
-    zoom: 15
+    zoom: 8
     });
 
     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
