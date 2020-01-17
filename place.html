@@ -196,12 +196,19 @@
 						<div class="block-heading">
 							<h2>MORE COMING SOON!</h2>
 							<p>The Place page will discuss where archaeological sites are and the variety of types of archaeological sites. This page will include a map with public archaeological sites in Illinois with pop-ups with short descriptions and a photo. An emphasis will be placed on archaeological sites near Springfield, IL to showcase that the students are surrounded by archaeology. Ten historic and ten prehistoric sites will be highlighted (and include an option to filter by site type).</p>
-							</div>
+						</div>	
+					</div>	<!-- End of /.block --> 
+				</div>	<!-- End of /.col-md-12 -->
+			</div>	<!-- End of /.row -->
+		</div>	<!-- End of /.container -->
+	</section>	<!-- End of Section -->
+
+<!--Map Section-->
 							
-							<div class="content-section-map">
-							<div id='map' style="width:100%; height:80%;"></div>
-			    			<script>
-							var greenIcon = new L.Icon({
+	<div class="content-section-map">
+		<div id='map' style="width:100%; height:80%;"></div>
+			<script>
+		var greenIcon = new L.Icon({
   		iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
  		shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
   		iconSize: [25, 41],
@@ -304,16 +311,9 @@ var consumption = new L.LayerGroup();
 	};
 	L.control.layers(baseLayers, overlays).addTo(map);
 </script>
-			    			</div><!--content section map-->
-						</div>	
-					</div>	<!-- End of /.block --> 
-				</div>	<!-- End of /.col-md-12 -->
-			</div>	<!-- End of /.row -->
-		</div>	<!-- End of /.container -->
-	</section>	<!-- End of Section -->
+</div><!--content section map-->
+						
 
-
-</script>
 
 
 
