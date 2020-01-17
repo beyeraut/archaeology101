@@ -215,29 +215,47 @@ integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIpt
 	<script>
 	
 
-    var map = L.map('map',{
-    center: [39.7803, -89.6492],
-    zoom: 8,
+   // var map = L.map('map',{
+    //center: [39.7803, -89.6492],
+   // zoom: 8,
 
-    });
+   // });
 
-    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
+   // L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+   // attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+   // }).addTo(map);
     
-    var lincoln = L.marker([39.8036, -89.6598]).bindPopup('This is Littleton, CO.'),
-   		fort = L.marker([39.6969, -89.7752]).bindPopup('This is Denver, CO.'),
-    	golden = L.marker([39.8995, -89.3605]).bindPopup('This is Golden, CO.');
-  
-  	var historic = L.layerGroup([lincoln, fort, golden]);
-  	
-  	 var cahokia = L.marker([39.9416, -89.7821]).bindPopup('This is Littleton, CO.'),
-    	 mound = L.marker([39.6187, -89.4923]).bindPopup('This is Golden, CO.');
-  
-  	var prehistoric = L.layerGroup([cahokia, mound]);
-  	
+   var littleton = L.marker([39.61, -105.02]).bindPopup('This is Littleton, CO.'),
+    denver    = L.marker([39.74, -104.99]).bindPopup('This is Denver, CO.'),
+    aurora    = L.marker([39.73, -104.8]).bindPopup('This is Aurora, CO.'),
+    golden    = L.marker([39.77, -105.23]).bindPopup('This is Golden, CO.');
 
+	var cities = L.layerGroup([littleton, denver, aurora, golden]);
 
+	var grayscale = L.tileLayer(mapboxUrl, {id: 'MapID', attribution: mapboxAttribution}),
+    streets   = L.tileLayer(mapboxUrl, {id: 'MapID', attribution: mapboxAttribution});
+
+var map = L.map('map', {
+    center: [39.73, -104.99],
+    zoom: 10,
+    layers: [grayscale, cities]
+});
+
+var baseMaps = {
+    "Grayscale": grayscale,
+    "Streets": streets
+};
+
+var overlayMaps = {
+    "Cities": cities
+};
+
+L.control.layers(baseMaps, overlayMaps).addTo(map);
+
+var baseMaps = {
+    "<span style='color: gray'>Grayscale</span>": grayscale,
+    "Streets": streets
+};
 
 
 </script>
