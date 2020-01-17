@@ -401,7 +401,11 @@ header {
 /*	 Catagorie Start
     ==================================================*/
 
-
+#catagorie .para {
+	padding: 20%;
+}
+	
+	
 #catagorie .block {
 	margin-top: 30px;
 }
