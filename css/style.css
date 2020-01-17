@@ -4,6 +4,10 @@ body { font-family: 'Open Sans', sans-serif; color: #555; font-size: 18px; font-
 li { list-style: none;}
 a:hover { text-decoration: none; }
 
+/*MAP*/
+#mapid { height: 180px; }
+
+
 /*Headers*/
 h1,h2,h3,h4,h5,h6 { font-family: 'Yanone Kaffeesatz', sans-serif;color: #555}
 

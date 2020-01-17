@@ -27,12 +27,13 @@
 	<script src="js/main.js" type="text/javascript"></script>
 	
 	<!--Map-->
-   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.32.1/mapbox-gl.js'></script>
-    	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.32.1/mapbox-gl.css' rel='stylesheet' />
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
- 	<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
-
-
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+ <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+   crossorigin=""></script>
 
 </head>
 <body>
@@ -205,119 +206,16 @@
 		</div>	<!-- End of /.container -->
 	</section>	<!-- End of Section -->
 
-<!--Map Section-->
-		<section id="catagorie">
-		<div class="container">					
-	<div class="content-section-map">
-		<div id='map' style="width:100%; height:80%;"></div>
-			<script>
-		var greenIcon = new L.Icon({
-  		iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
- 		shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-  		iconSize: [25, 41],
-  		iconAnchor: [12, 41],
-  		popupAnchor: [1, -34],
-  		shadowSize: [41, 41]
-		});
-	var orangeIcon = new L.Icon({
-  		iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png',
- 		shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-  		iconSize: [25, 41],
-  		iconAnchor: [12, 41],
-  		popupAnchor: [1, -34],
-  		shadowSize: [41, 41]
-		});
-	var violetIcon = new L.Icon({
-  		iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-violet.png',
- 		shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-  		iconSize: [25, 41],
-  		iconAnchor: [12, 41],
-  		popupAnchor: [1, -34],
-  		shadowSize: [41, 41]
-		});
-	var yellowIcon = new L.Icon({
-  		iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-yellow.png',
- 		shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-  		iconSize: [25, 41],
-  		iconAnchor: [12, 41],
-  		popupAnchor: [1, -34],
-  		shadowSize: [41, 41]
-		});
-				    
-var production = new L.LayerGroup();
-				    
-	L.marker([42.730619, -84.473572], {icon: violetIcon}).bindPopup('<b>Orchard:</b><br>While there are still orchards on campus today, historically MSU had orchards north of the Red Cedar River, near the location of Snyder-Phillips dormitory today. The archival records show that there many different types of fruit trees planted on campus, but there was a specific mention of a pear orchard in 1863! <a href="production.html">Learn more!</a><br> <img src="img/orchard.jpg" alt="orchard - Image courtesy of Michigan State University Archives and Historical Collections" style="width:100%"><br><i>Image courtesy of Michigan State University Archives and Historical Collections.</i>').addTo(production),
-		
-	L.marker([42.731824, -84.477576], {icon: violetIcon}).bindPopup('<b>Farms:</b><br> Unlike today, farms were located in very different places historically, with some north of the river. This location is based off of historical maps, that show many different types of farming buildings throughout this section of campus. Farms on campus supplied the dormitories with fresh vegetables and meat, supplemented by products from surrounding local farms. <a href="production.html">Learn more!</a><br><img src="img/farmbuildings.jpg" alt="farm buildings - Image courtesy of Michigan State University Archives and Historical Collections" style="width:100%"><br><i>Image courtesy of Michigan State University Archives and Historical Collections. </i>').addTo(production);
-
-var acquisition = new L.LayerGroup();
-	L.marker([42.729600, -84.483198], {icon: yellowIcon}).bindPopup('<b>Fishing:</b><br>Just as you can fish in the Red Cedar River today, we have uncovered several historical accounts of fishing on campus. One account from the diary of A. B. Morse, found at the MSU Archives talks about how he went fishing for the first time, and caught three fish. While we do not know for sure that this took place on campus, it is possible that he walked down to the river on campus for his first fishing experience. Archaeologically, we have uncovered a lot of fish bone through our campus excavations, especially in the privy associated with Saint’s Rest, the first dormitory on campus. <a href="production.html">Learn more!</a><br><img src="img/redcedarriver.jpg" alt="Red Cedar River - Image courtesy of Michigan State University Archives and Historical Collections" style="width:100%"><br><i>Image courtesy of Michigan State University Archives and Historical Collections.</i>').addTo(acquisition);
-				    
-				    
-				    
-				    
-var processing = new L.LayerGroup();
-				    
-	L.marker([42.724346, -84.478472]).bindPopup('<b>Dairy Store:</b><br>The Dairy Plant currently focuses on producing shelf-stable cheese and ice cream. They produce 40,000 gallons in 40 different flavors of ice cream each year and 40,000 lbs of cheese in 11 different types or flavors. The milk is supplied by the 180 cows milked on campus in the Dairy Teaching and Resource center, as well as those milked in the Pasture Dairy center in the Kellogg Biological Station (although cream is acquired from another source). The image below is of the Dairy Store (undated). <a href="processing.html">Learn more!</a><br><img src="img/dairystore4.jpg" alt="Dairy Store - no date - Image courtesy of Michigan State University Archives and Historical Collections" style="width:100%"><br><i>Image courtesy of Michigan State Universty Archives and Historical Collections.</i>').addTo(processing),
-		
-	L.marker([42.730595, -84.478166]).bindPopup('<b>Butchering:</b><br> This pin marks the location of a historic beef cattle barn from 1915. While no longer standing, this location would have housed cattle and could have served as a place for the initial processing of beef for consumption on campus. We were able to determine this location based off a historic map that illustrated many different farm building locations throughout north campus. <a href="processing.html">Learn more!</a><br> <img src="img/production.jpg" alt="Processing Meat - Image courtesy of Michigan State University Archives and Historical Collections" style="width:100%"><br><i>Image courtesy of Michigan State University Archives and Historical Collections.</i>').addTo(processing),
-		
-	L.marker([42.724174, -84.478643]).bindPopup('<b>Anthony Hall/Plant:</b><br>Following the construction of Anthony Hall—which was named after Ernest L. Anthony, the former head of the Dairy Department—the new dairy plant was highly productive. They provided milk to all of the residence halls, and made products such as chocolate milk, cream, half-and-half, sour cream, cottage cheese, buttermilk, dry milk, butter, and, of course, cheese and ice cream (including ice cream bars). <a href="processing.html">Learn more!</a> <br> <img src="img/dairyequip2.jpg" alt="Dairy Equipment - Image courtesy of Michigan State University Archives and Historical Collections" style="width:100%"></a><br><i>Image courtesy of Michigan State University Archives and Historical Collections.</i>').addTo(processing),
-		
-	L.marker([42.725559, -84.477294]).bindPopup('<b>Dairy Barn:</b><br>The first dedicated Dairy Barn was built in 1900 and held 100 cows. Several years later, in 1929, the Dairy Barn was rebuilt , which could house almost 150 heads of cattle and contained the most up-to-date equipment of that time. While updates were part of the reason for this move, another reason was disease. Tuberculosis wiped out most of the herd in 1904 (Anderson 1929), and contagious disease continued to plague the herd in the decades after. Those in charge of the dairy hoped the move to a new, sanitary location would break the disease cycle. Now MSU has an entire Dairy Teaching and Research Center with 180 Holstein milk cows ranging from 2 - 12 years of age. <a href="processing.html">Learn more!<br> <img src="img/dairybarn.jpg" alt="Dairy Barn - Image courtesy of Michigan State University Archives and Historical Collections" style="width:100%"></a><br><i>Image courtesy of Michigan State University Archives and Historical Collections.</i>').addTo(processing),
-		
-	L.marker([42.731944, -84.482149]).bindPopup('<b>College Hall:</b><br>College hall was among the first dormitories on campus, and would have had a kitchen for meal preparation for the residents. The image below shows several students in a cooking class. While we do not know where this class took place, it can give us an idea of how the kitchens on campus were arranged during this time. <a href="processing.html">Learn more!<br> <img src="img/cookingclass1917.jpg" alt="Cooking Class 1917 - Image courtesy of Michigan State University Archives and Historical Collections" style="width:100%"></a><br><i>Image courtesy of Michigan State University Archives and Historical Collections.</i>').addTo(processing),
-		
-	L.marker([42.731621, -84.481712]).bindPopup('<b>Williams Hall:</b><br>This pin marks the original location of Williams Hall, which was among the first dormitories on campus. As such, the meal preparation for the students residing in the hall would have taken place within the dorm kitchens. The image below shows Williams Hall from 1910. <a href="processing.html">Learn more!</a> <br> <img src="img/williamshall1910.jpg" alt="Williams Hall 1910 - Image courtesy of Michigan State University Archives and Historical Collections" style="width:100%"><br><i>Image courtesy of Michigan State University Archives and Historical Collections.</i>').addTo(processing);
-				    
-				   
-var consumption = new L.LayerGroup();
-				    
-	L.marker([42.731456, -84.481025], {icon: orangeIcon}).bindPopup('<b>Consumption in Dorms:</b><br>This pin marks the location of the first dormitory on campus, Saints Rest. While we do not have any images from students eating within this particular dorm, the image below shows several students eating within a dorm cafeteria during 1914. <a href="consumption.html">Learn more!</a><br><img src="img/studentseatdorm1914.jpg" alt="Students Eating in Dorm in 1914 - Image courtesy of Michigan State University Archives and Historical Collections" style="width:100%"><br><i>Image courtesy of Michigan State University Archives and Historical Collections.</i>').addTo(consumption),
-		
-	L.marker([42.733040, -84.484545], {icon: orangeIcon}).bindPopup('<b>Consumption with Faculty:</b><br>Cowles House, also known as the President’s house, would have been (and still is) one of the locations on campus that students could have dinner with faculty. Stories found in diaries from the MSU Archives detail many different accounts in MSU’s early years of students and faculty sharing meals. Several of these stories discuss the students and faculty hunting together on campus, and sharing their spoils for dinner! <a href="consumption.html">Learn more!</a><br><img src="img/cowelshouse.jpg" alt="Cowels House - Image courtesy of Michigan State University Archives and Historical Collections" style="width:100%"><br><i>Image courtesy of Michigan State University Archives and Historical Collections.</i>').addTo(consumption),
-		
-	L.marker([42.730974, -84.483871], {icon: orangeIcon}).bindPopup('<b>Womens Home Economics House:</b><br>Home economics houses were created to give women who were enrolled in the school in home management courses practical experiences with their new skills. This pin marks the location of teh Gunson-Beyha house. Each home had an advisor with around eight students who were responsible for taking care of the household. This program gave students experience in nutrition, meal planning, cooking, and maintenance of a house. The image below shows several students attending a sewing class in 1896. <a href="consumption.html">Learn more!</a><br><img src="img/sewingclass1896.jpg" alt="Sewing Class 1896 - Image courtesy of Michigan State University Archives and Historical Collections" style="width:100%"><br><i>Image courtesy of Michigan State University Archives and Historical Collections.</i>').addTo(consumption);
-				    
-				    
-				    
-				    
-	var education = new L.LayerGroup();
-				    
-	L.marker([42.731731, -84.479382], {icon: greenIcon}).bindPopup('<b>Chittenden Hall:</b><br>No official courses on dairying were taught in the earliest days of the College, although its tenets and techniques were incorporated into more general instruction. However, in 1900, a new building, which housed both Dairy and Forestry classes, was built, where modern-day Chittenden Hall resides. In 1910, courses offered included Elementary Dairying, Creamery Butter Making, Cheese Making, and Market Milk. The image below shows students participating in the first dairy class. <a href="education.html">Learn more!</a><br><img src="img/firstdairyclass.jpg" alt="First Dairy Class - Image courtesy of Michigan State University Archives and Historical Collections" style="width:100%"><br><i>Image courtesy of Michigan State University Archives and Historical Collections.</i>').addTo(education),
-		
-	L.marker([42.731092, -84.477951], {icon: greenIcon}).bindPopup('<b>Dairy Science Building:</b><br>The first building containing a plant dedicated to dairy manufacturing was constructed in 1913. Known as the Dairy Building, it was located on the north end of Farm Lane and cost $55,000. It contained a well-equipped creamery for the practical training of the students. The original Dairy Store was opened in this building, although the exact date of this event is unknown. The image below shows the Dairy Building. <a href="education.html">Learn more!</a><br><img src="img/dairysciencebuilding.jpg" alt="Dairy Science Building - Image courtesy of Michigan State University Archives and Historical Collections" style="width:100%"><br><i>Image courtesy of Michigan State University Archives and Historical Collections.</i>').addTo(education),
-		
-	L.marker([42.723945, -84.478536], {icon: greenIcon}).bindPopup('<b>Anthony Hall - Education:</b><br>Not only does Anthony Hall house the current MSU Dairy Store and the dairy plant, it also has a component where visitors can learn about dairy production at MSU. You can take a self-guided tour of the observation deck to learn about the processing of milk, cheese, and ice cream.  <a href="education.html">Learn more!</a><br><img src="img/dairyequip1.jpg" alt="Dairy Equipment - Image courtesy of Michigan State University Archives and Historical Collections" style="width:100%"><br><i>Image courtesy of Michigan State University Archives and Historical Collections.</i>').addTo(education);
-				    
-	var mbAttr = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
-			'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-			'Imagery © <a href="http://mapbox.com">Mapbox</a>',
-		mbUrl = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiYmV5ZXJhdXQiLCJhIjoiY2lnM3hhMGthMjc5NHRqbTNvMmdtbHR4YiJ9.dP5gGJ59Hly_pleCOGkzQw';
-	var grayscale   = L.tileLayer(mbUrl, {id: 'mapbox.light', attribution: mbAttr}),
-		streets  = L.tileLayer(mbUrl, {id: 'mapbox.streets',   attribution: mbAttr});
-	var map = L.map('map', {
-		center: [42.730907, -84.482162],
-		zoom: 15,
-		layers: [grayscale, production, acquisition, processing, consumption, education]
-	});
-	var baseLayers = {
-		"Grayscale": grayscale,
-		"Streets": streets
-	};
-	var overlays = {
-		"Production": production,
-		"Acquisition": acquisition,
-		"Processing": processing,
-		"Consumption": consumption,
-		"Education": education
-	};
-	L.control.layers(baseLayers, overlays).addTo(map);
-</script>
-</div><!--content section map-->
-		</div>	<!-- End of /.container -->
-	</section>	<!-- End of Section -->					
-
+			
+<!--MAP SECTION-->
+ <div id="mapid"></div>
+	var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox/streets-v11',
+    accessToken: 'pk.eyJ1IjoiYmV5ZXJhdXQiLCJhIjoiY2lnM3hhMGthMjc5NHRqbTNvMmdtbHR4YiJ9.dP5gGJ59Hly_pleCOGkzQw'
+}).addTo(mymap);
 
 
 
