@@ -214,24 +214,17 @@ integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIpt
 	<center><div id='map' style="width:70%; height:600px;"></div>
 	<script>
 	
-
-   // var map = L.map('map',{
-    //center: [39.7803, -89.6492],
-   // zoom: 8,
-
-   // });
-
-   // L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-   // attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-   // }).addTo(map);
-    
-
 	var historic = L.layerGroup();
 
-	L.marker([39.61, -105.02]).bindPopup('This is Littleton, CO.').addTo(historic),
-	L.marker([39.74, -104.99]).bindPopup('This is Denver, CO.').addTo(historic),
-	L.marker([39.73, -104.8]).bindPopup('This is Aurora, CO.').addTo(historic),
-	L.marker([39.77, -105.23]).bindPopup('This is Golden, CO.').addTo(historic);
+	L.marker([39.797708, -89.645794]).bindPopup('This is Lincoln Home.').addTo(historic),
+	L.marker([37.968945, -89.910186]).bindPopup('This is Fort Kaskaskia State Historic Site.').addTo(historic),
+	L.marker([41.321176, -89.000261]).bindPopup('This is Starved Rock State Park.').addTo(historic),
+	L.marker([40.401428, -88.669235]).bindPopup('This is Grand Village of the Kickapoo Park.').addTo(historic),
+	L.marker([39.380501, -88.210072]).bindPopup('This is Lincoln Log Cabin State Historic Site.').addTo(historic),
+	L.marker([40.645078, -89.606418]).bindPopup('This is Fort Crevecoeur.').addTo(historic),
+	L.marker([39.978686, -89.847198]).bindPopup('This is Lincoln’s New Salem State Historic Site.').addTo(historic),
+	L.marker([38.802528, -90.101631]).bindPopup('This is Lewis and Clark State Historic Site.').addTo(historic),
+	L.marker([39.698241, -90.960990]).bindPopup('This is New Philadelphia Town National Historic Site.').addTo(historic);
 
 
 	var mbAttr = 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
@@ -243,8 +236,8 @@ integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIpt
 		streets  = L.tileLayer(mbUrl, {id: 'mapbox/streets-v11',   attribution: mbAttr});
 
 	var map = L.map('map', {
-		center: [39.73, -104.99],
-		zoom: 10,
+		center: [39.7803, -89.6492],
+		zoom: 7,
 		layers: [grayscale, historic]
 	});
 
