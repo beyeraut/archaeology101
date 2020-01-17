@@ -1,6 +1,6 @@
 ------------- Common-CSS----------------*/
 
-body { font-family: 'Open Sans', sans-serif; color: #555; font-size: 14px; font-weight: 300; }
+body { font-family: 'Open Sans', sans-serif; color: #555; font-size: 18px; font-weight: 300; }
 li { list-style: none;}
 a:hover { text-decoration: none; }
 
@@ -400,8 +400,8 @@ header {
 
 /*	 Catagorie Start
     ==================================================*/
-
-
+	
+	
 #catagorie .block {
 	margin-top: 30px;
 }
