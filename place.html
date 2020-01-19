@@ -214,31 +214,53 @@ integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIpt
 	<center><div id='map' style="width:70%; height:600px;"></div>
 	<script>
 	
+	var greenIcon = L.icon({
+    iconUrl: 'greenIcon.png',
+    shadowUrl: 'trowel-shadow.png',
+
+    iconSize:     [38, 95], // size of the icon
+    shadowSize:   [50, 64], // size of the shadow
+    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+    shadowAnchor: [4, 62],  // the same for the shadow
+    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+});
+
+var purpleIcon = L.icon({
+    iconUrl: 'purpleIcon.png',
+    shadowUrl: 'trowel-shadow.png',
+
+    iconSize:     [38, 95], // size of the icon
+    shadowSize:   [50, 64], // size of the shadow
+    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+    shadowAnchor: [4, 62],  // the same for the shadow
+    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+});
+	
 	var historic = L.layerGroup();
 
-	L.marker([39.797708, -89.645794]).bindPopup('This is Lincoln Home.').addTo(historic),
-	L.marker([37.968945, -89.910186]).bindPopup('This is Fort Kaskaskia State Historic Site.').addTo(historic),
-	L.marker([41.321176, -89.000261]).bindPopup('This is Starved Rock State Park.').addTo(historic),
-	L.marker([40.401428, -88.669235]).bindPopup('This is Grand Village of the Kickapoo Park.').addTo(historic),
-	L.marker([39.380501, -88.210072]).bindPopup('This is Lincoln Log Cabin State Historic Site.').addTo(historic),
-	L.marker([40.645078, -89.606418]).bindPopup('This is Fort Crevecoeur.').addTo(historic),
-	L.marker([39.978686, -89.847198]).bindPopup('This is Lincoln’s New Salem State Historic Site.').addTo(historic),
-	L.marker([38.802528, -90.101631]).bindPopup('This is Lewis and Clark State Historic Site.').addTo(historic),
-	L.marker([42.318130, -90.214667]).bindPopup('This is Apple River Fort State Historic Site.').addTo(historic),
-	L.marker([39.698241, -90.960990]).bindPopup('This is New Philadelphia Town National Historic Site.').addTo(historic);
+	L.marker([39.797708, -89.645794], {icon: greenIcon}).bindPopup('<b>Lincoln Home National Historic Site</b><br>Description<br>image.').addTo(historic),
+	L.marker([37.968945, -89.910186], {icon: greenIcon}).bindPopup('This is Fort Kaskaskia State Historic Site.').addTo(historic),
+	L.marker([41.321176, -89.000261], {icon: greenIcon}).bindPopup('This is Starved Rock State Park.').addTo(historic),
+	L.marker([40.401428, -88.669235], {icon: greenIcon}).bindPopup('This is Grand Village of the Kickapoo Park.').addTo(historic),
+	L.marker([39.380501, -88.210072], {icon: greenIcon}).bindPopup('This is Lincoln Log Cabin State Historic Site.').addTo(historic),
+	L.marker([40.645078, -89.606418], {icon: greenIcon}).bindPopup('This is Fort Crevecoeur.').addTo(historic),
+	L.marker([39.978686, -89.847198], {icon: greenIcon}).bindPopup('This is Lincoln’s New Salem State Historic Site.').addTo(historic),
+	L.marker([38.802528, -90.101631], {icon: greenIcon}).bindPopup('This is Lewis and Clark State Historic Site.').addTo(historic),
+	L.marker([42.318130, -90.214667], {icon: greenIcon}).bindPopup('This is Apple River Fort State Historic Site.').addTo(historic),
+	L.marker([39.698241, -90.960990], {icon: greenIcon}).bindPopup('This is New Philadelphia Town National Historic Site.').addTo(historic);
 
 var prehistoric = L.layerGroup();
 
-	L.marker([38.655052, -90.061710]).bindPopup('This is Cahokia Mounds State Historic Site & Interpretive Center.').addTo(prehistoric),
-	L.marker([38.062808, -90.063806]).bindPopup('This is Modoc Rockshelter National Historic Site.').addTo(prehistoric),
-	L.marker([37.082340, -88.491967]).bindPopup('This is Kincaid Mounds State Historic Site.').addTo(prehistoric),
-	L.marker([40.350599, -90.115716]).bindPopup('This is Dickson Mounds Museum.').addTo(prehistoric),
-	L.marker([37.890564, -89.638612]).bindPopup('This is Piney Creek Ravine Nature Preserve.').addTo(prehistoric),
-	L.marker([41.780748, -90.229310]).bindPopup('This is Albany Mounds State Historic Site.').addTo(prehistoric),
-	L.marker([40.304979, -90.063721]).bindPopup('This is Rockwell Mound.').addTo(prehistoric),
-	L.marker([38.695050, -90.073633]).bindPopup('This is Horseshoe Lake State Park.').addTo(prehistoric),
-	L.marker([37.468187, -88.688412]).bindPopup('This is Millstone Bluff Archaeological Area.').addTo(prehistoric),
-	L.marker([38.630599, -89.784541]).bindPopup('This is Emerald Mound.').addTo(prehistoric);
+	L.marker([38.655052, -90.061710], {icon: purpleIcon}).bindPopup('This is Cahokia Mounds State Historic Site & Interpretive Center.').addTo(prehistoric),
+	L.marker([38.062808, -90.063806], {icon: purpleIcon}).bindPopup('This is Modoc Rockshelter National Historic Site.').addTo(prehistoric),
+	L.marker([37.082340, -88.491967], {icon: purpleIcon}).bindPopup('This is Kincaid Mounds State Historic Site.').addTo(prehistoric),
+	L.marker([40.350599, -90.115716], {icon: purpleIcon}).bindPopup('This is Dickson Mounds Museum.').addTo(prehistoric),
+	L.marker([37.890564, -89.638612], {icon: purpleIcon}).bindPopup('This is Piney Creek Ravine Nature Preserve.').addTo(prehistoric),
+	L.marker([41.780748, -90.229310], {icon: purpleIcon}).bindPopup('This is Albany Mounds State Historic Site.').addTo(prehistoric),
+	L.marker([40.304979, -90.063721], {icon: purpleIcon}).bindPopup('This is Rockwell Mound.').addTo(prehistoric),
+	L.marker([38.695050, -90.073633], {icon: purpleIcon}).bindPopup('This is Horseshoe Lake State Park.').addTo(prehistoric),
+	L.marker([37.468187, -88.688412], {icon: purpleIcon}).bindPopup('This is Millstone Bluff Archaeological Area.').addTo(prehistoric),
+	L.marker([38.630599, -89.784541], {icon: purpleIcon}).bindPopup('This is Emerald Mound.').addTo(prehistoric);
 
 	var mbAttr = 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
 			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
