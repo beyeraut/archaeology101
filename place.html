@@ -233,7 +233,7 @@ integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIpt
 	
 	var historic = L.layerGroup();
 
-	L.marker([39.797708, -89.645794], {icon: greenIcon}).addTo(historic).bindPopup('<b>Lincoln Home National Historic Site</b><br>Description<br>image.'),
+	L.marker([39.797708, -89.645794], {icon: greenIcon}).addTo(historic).bindPopup('<b>Lincoln Home National Historic Site</b><br>Description<br><a title="George Longenecker [CC BY-SA (https://creativecommons.org/licenses/by-sa/4.0)]" href="https://commons.wikimedia.org/wiki/File:Abraham_Lincoln_Home.jpg"><img width="512" alt="Abraham Lincoln Home" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Abraham_Lincoln_Home.jpg/512px-Abraham_Lincoln_Home.jpg"></a>.'),
 	L.marker([37.968945, -89.910186], {icon: greenIcon}).addTo(historic).bindPopup('This is Fort Kaskaskia State Historic Site.'),
 	L.marker([41.321176, -89.000261], {icon: greenIcon}).addTo(historic).bindPopup('This is Starved Rock State Park.'),
 	L.marker([40.401428, -88.669235], {icon: greenIcon}).addTo(historic).bindPopup('This is Grand Village of the Kickapoo Park.'),
@@ -266,7 +266,7 @@ var prehistoric = L.layerGroup();
 		streets  = L.tileLayer(mbUrl, {id: 'mapbox/streets-v11',   attribution: mbAttr});
 
 	var map = L.map('map', {
-		center: [39.7803, -89.6492],
+		center: [39.527738, -89.608491],
 		zoom: 7,
 		layers: [grayscale, historic]
 	});
