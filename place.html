@@ -234,16 +234,16 @@ var greenIcon = new LeafIcon({iconUrl: 'greenIcon.png'}),
 	
 	var historic = L.layerGroup();
 
-	L.marker([39.797708, -89.645794], {icon: greenIcon}).bindPopup('<b>Lincoln Home National Historic Site</b><br>Description<br>image.').addTo(historic),
-	L.marker([37.968945, -89.910186], {icon: greenIcon}).bindPopup('This is Fort Kaskaskia State Historic Site.').addTo(historic),
-	L.marker([41.321176, -89.000261], {icon: greenIcon}).bindPopup('This is Starved Rock State Park.').addTo(historic),
-	L.marker([40.401428, -88.669235], {icon: greenIcon}).bindPopup('This is Grand Village of the Kickapoo Park.').addTo(historic),
-	L.marker([39.380501, -88.210072], {icon: greenIcon}).bindPopup('This is Lincoln Log Cabin State Historic Site.').addTo(historic),
-	L.marker([40.645078, -89.606418], {icon: greenIcon}).bindPopup('This is Fort Crevecoeur.').addTo(historic),
-	L.marker([39.978686, -89.847198], {icon: greenIcon}).bindPopup('This is Lincoln’s New Salem State Historic Site.').addTo(historic),
-	L.marker([38.802528, -90.101631], {icon: greenIcon}).bindPopup('This is Lewis and Clark State Historic Site.').addTo(historic),
-	L.marker([42.318130, -90.214667], {icon: greenIcon}).bindPopup('This is Apple River Fort State Historic Site.').addTo(historic),
-	L.marker([39.698241, -90.960990], {icon: greenIcon}).bindPopup('This is New Philadelphia Town National Historic Site.').addTo(historic);
+	L.marker([39.797708, -89.645794], {icon: greenIcon}).addTo(historic).bindPopup('<b>Lincoln Home National Historic Site</b><br>Description<br>image.'),
+	L.marker([37.968945, -89.910186], {icon: greenIcon}).addTo(historic).bindPopup('This is Fort Kaskaskia State Historic Site.'),
+	L.marker([41.321176, -89.000261], {icon: greenIcon}).addTo(historic).bindPopup('This is Starved Rock State Park.'),
+	L.marker([40.401428, -88.669235], {icon: greenIcon}).addTo(historic).bindPopup('This is Grand Village of the Kickapoo Park.'),
+	L.marker([39.380501, -88.210072], {icon: greenIcon}).addTo(historic).bindPopup('This is Lincoln Log Cabin State Historic Site.'),
+	L.marker([40.645078, -89.606418], {icon: greenIcon}).addTo(historic).bindPopup('This is Fort Crevecoeur.'),
+	L.marker([39.978686, -89.847198], {icon: greenIcon}).addTo(historic).bindPopup('This is Lincoln’s New Salem State Historic Site.'),
+	L.marker([38.802528, -90.101631], {icon: greenIcon}).addTo(historic).bindPopup('This is Lewis and Clark State Historic Site.'),
+	L.marker([42.318130, -90.214667], {icon: greenIcon}).addTo(historic).bindPopup('This is Apple River Fort State Historic Site.'),
+	L.marker([39.698241, -90.960990], {icon: greenIcon}).addTo(historic).bindPopup('This is New Philadelphia Town National Historic Site.');
 
 var prehistoric = L.layerGroup();
 
