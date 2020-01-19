@@ -201,7 +201,7 @@ integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIpt
 			<div class="row">
 				<div class="col-md-12">
 					<div class="block">
-							<p>!!This page will discuss where archaeological sites are and the variety of types of archaeological sites. This page will include a map with public archaeological sites in Illinois with pop-ups with short descriptions and a photo. An emphasis will be placed on archaeological sites near Springfield, IL to showcase that the students are surrounded by archaeology. Ten historic and ten prehistoric sites will be highlighted (and include an option to filter by site type).</p>
+							<p>This page will discuss where archaeological sites are and the variety of types of archaeological sites. This page will include a map with public archaeological sites in Illinois with pop-ups with short descriptions and a photo. An emphasis will be placed on archaeological sites near Springfield, IL to showcase that the students are surrounded by archaeology. Ten historic and ten prehistoric sites will be highlighted (and include an option to filter by site type).</p>
 					</div>	<!-- End of /.block --> 
 				</div>	<!-- End of /.col-md-12 -->
 			</div>	<!-- End of /.row -->
@@ -214,23 +214,22 @@ integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIpt
 	<center><div id='map' style="width:70%; height:600px;"></div>
 	<script>
 	
-var LeafIcon = L.Icon.extend({
-    options: {
-        shadowUrl: 'trowel-shadow.png',
-        iconSize:     [38, 95],
-        shadowSize:   [50, 64],
-        iconAnchor:   [22, 94],
-        shadowAnchor: [4, 62],
-        popupAnchor:  [-3, -76]
-    }
-});
-
-var greenIcon = new LeafIcon({iconUrl: 'greenIcon.png'}),
-    purpleIcon = new LeafIcon({iconUrl: 'purpleIcon.png'});
-    
-    L.icon = function (options) {
-    return new L.Icon(options);
-};
+	var greenIcon = new L.Icon({
+  		iconUrl: 'images/greenIcon.png',
+ 		shadowUrl: 'images/trowel-shadow.png',
+  		iconSize: [25, 41],
+  		iconAnchor: [12, 41],
+  		popupAnchor: [1, -34],
+  		shadowSize: [41, 41]
+		});
+	var purpleIcon = new L.Icon({
+  		iconUrl: 'images/purpleIcon.png',
+ 		shadowUrl: 'images/trowel-shadow.png',
+  		iconSize: [25, 41],
+  		iconAnchor: [12, 41],
+  		popupAnchor: [1, -34],
+  		shadowSize: [41, 41]
+		});
 	
 	var historic = L.layerGroup();
 
