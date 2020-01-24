@@ -201,7 +201,7 @@ integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIpt
 			<div class="row">
 				<div class="col-md-12">
 					<div class="block">
-							<p>Archaeology is all around you!! This page will discuss where archaeological sites are and the variety of types of archaeological sites. This page will include a map with public archaeological sites in Illinois with pop-ups with short descriptions and a photo. An emphasis will be placed on archaeological sites near Springfield, IL to showcase that the students are surrounded by archaeology. Ten historic and ten prehistoric sites will be highlighted (and include an option to filter by site type).</p>
+							<p>Archaeology is all around you. This page will discuss where archaeological sites are and the variety of types of archaeological sites. This page will include a map with public archaeological sites in Illinois with pop-ups with short descriptions and a photo. An emphasis will be placed on archaeological sites near Springfield, IL to showcase that the students are surrounded by archaeology. Ten historic and ten prehistoric sites will be highlighted (and include an option to filter by site type).</p>
 					</div>	<!-- End of /.block -->
 				</div>	<!-- End of /.col-md-12 -->
 			</div>	<!-- End of /.row -->
@@ -286,8 +286,8 @@ var prehistoric = L.layerGroup();
 	var map = L.map('map', {
 		center: [39.917159, -89.115146],
 		zoom: 6.5,
-		setMaxZoom: 5,
-		setMinZoom:9,
+		MaxZoom: 5,
+		MinZoom:9,
 		layers: [grayscale, historic]
 	});
 
