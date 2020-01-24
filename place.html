@@ -285,7 +285,7 @@ var prehistoric = L.layerGroup();
 
 	var map = L.map('map', {
 		center: [39.917159, -89.115146],
-		zoom: 6.5,
+		zoom: 6,
 		MaxZoom: 5,
 		MinZoom:9,
 		layers: [grayscale, historic]
@@ -302,6 +302,8 @@ var prehistoric = L.layerGroup();
 	};
 
 	L.control.layers(baseLayers, overlays).addTo(map);
+	L.control.scale().addTo(map);
+
 
 
 </script>
