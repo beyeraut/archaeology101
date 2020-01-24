@@ -284,8 +284,9 @@ var prehistoric = L.layerGroup();
 		streets  = L.tileLayer(mbUrl, {id: 'mapbox/streets-v11',   attribution: mbAttr});
 
 	var map = L.map('map', {
-		center: [40.151262, -89.372894],
+		center: [39.917159, -89.115146],
 		zoom: 7,
+		setMaxZoom: 9,
 		layers: [grayscale, historic]
 	});
 
