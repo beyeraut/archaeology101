@@ -26,14 +26,27 @@
 	<script src="js/jquery.scrollUp.min.js"></script>
 	<script src="js/main.js" type="text/javascript"></script>
 
-
+	<!-- Entire bundle -->
+	<script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.8/lib/draggable.bundle.js"></script>
+	<!-- legacy bundle for older browsers (IE11) -->
+	<script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.8/lib/draggable.bundle.legacy.js"></script>
+	<!-- Draggable only -->
+	<script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.8/lib/draggable.js"></script>
+	<!-- Sortable only -->
+	<script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.8/lib/sortable.js"></script>
+	<!-- Droppable only -->
+	<script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.8/lib/droppable.js"></script>
+	<!-- Swappable only -->
+	<script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.8/lib/swappable.js"></script>
+	<!-- Plugins only -->
+	<script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.8/lib/plugins.js"></script>
 </head>
 <body>
 
 
 <!-- TOP HEADER Start
-    ================================================== 
-	
+    ==================================================
+
 	<section id="top">
 		<div class="container">
 			<div class="row">
@@ -82,7 +95,7 @@
 			</div> <!-- End Of /.row -->
 		</div>	<!-- End Of /.Container -->
 
-	
+
 	<!-- MODAL Start
     	================================================== -->
 
@@ -139,14 +152,14 @@
 			      	</div>
 		    	</div>
 		  	</div>
-		</div>	
+		</div>
 	</section>  <!-- End of /Section -->
-	
+
 
 
 	<!-- LOGO Start
     ================================================== -->
-	
+
 	<header>
 		<div class="container">
 			<div class="row">
@@ -159,7 +172,7 @@
 		</div>	<!-- End of /.container -->
 	</header> <!-- End of /Header -->
 
-	
+
 
 
 	<!-- MENU Start
@@ -183,7 +196,7 @@
 					<li><a href="place.html">PLACE</a></li>
 					<li class="active"><a href="artifacts.html">ARTIFACTS</a></li>
 					<li><a href="resources.html">RESOURCES</a></li>
-					
+
 					<!--Dropdown Option
 
 					<li class="dropdown">
@@ -198,10 +211,10 @@
 						    <li><a  href="#">Separated link</a></li>
 						</ul>
 					</li> -->
-					
+
 					<!-- End of /.dropdown -->
 
-					
+
 		        </ul> <!-- End of /.nav-main -->
 		    </div>	<!-- /.navbar-collapse -->
 		</div>	<!-- /.container-fluid -->
@@ -239,10 +252,26 @@
 				<div class="col-md-12">
 					<div class="block">
 						<div class="block-heading">
-							<h2>MORE COMING SOON</h2>
+							<h2>MORE COMING SOON!</h2>
 							<p>The Artifact Page will discuss what archaeologists find (studying people not dinos!). It will include two interactive games, a matching game, where users will match the definition of objects to an image and a game that allows the students to ‘unmask’ or ‘erase’ objects to see how perishable items would preserve after 1,000 years. The matching game will be built using the draggableJS library. The ‘unmasking’ game will be created by using EaselJS within the CreateJS library. </p>
-						</div>	
-					</div>	<!-- End of /.block --> 
+							<div class="container">
+							  <div class="dropzone draggable-dropzone--occupied"><div class="item">A</div></div>
+							  <div class="dropzone draggable-dropzone--occupied"><div class="item">B</div></div>
+							  <div class="dropzone draggable-dropzone--occupied"><div class="item">C</div></div>
+							</div>
+
+							<div class="container">
+							  <div class="dropzone"></div>
+							</div>
+
+							<style>
+							  .item { height: 100%; }
+							  .dropzone { outline: solid 1px; height: 50px; }
+							  .draggable-dropzone--occupied { background: lightgreen; }
+							</style>
+
+						</div>
+					</div>	<!-- End of /.block -->
 				</div>	<!-- End of /.col-md-12 -->
 			</div>	<!-- End of /.row -->
 		</div>	<!-- End of /.container -->
@@ -259,8 +288,8 @@
 					<div class="block">
 						<div class="block-heading">
 							<h2>MORE COMING SOON</h2>
-						</div>	
-					</div>	<!-- End of /.block --> 
+						</div>
+					</div>	<!-- End of /.block -->
 				</div>	<!-- End of /.col-md-12 -->
 			</div>	<!-- End of /.row -->
 		</div>	<!-- End of /.container -->
@@ -270,7 +299,7 @@
 
 	<!-- FOOTER Start
     ================================================== -->
-    
+
     	<footer>
 		<div class="container">
 			<div class="row">
@@ -279,7 +308,7 @@
 						<a href="#">
 							<img src="images/footer-logo.png" width="100%" alt="footer logo">
 						</a>
-										
+
 					</div>	<!-- End Of /.block -->
 				</div> <!-- End Of /.Col-md-4 -->
 				<div class="col-md-4">
@@ -287,7 +316,7 @@
 						<h4>ABOUT THE PROJECT</h4>
 						<p>
 							Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-						</p>	
+						</p>
 						<p class="mail"><i class="fa  fa-envelope"></i>Email: <span>apainter@msu.edu</span></p>
 						<p class="mail"><i class="fa  fa-envelope"></i>Email: <span>painte15@msu.edu</span></p>
 					</div>	<!-- End Of /.block -->
@@ -300,7 +329,7 @@
 				</div> <!-- End Of Col-md-3 -->
 			</div> <!-- End Of /.row -->
 		</div> <!-- End Of /.Container -->
-		
+
 
 
 		<!-- FOOTER-BOTTOM Start
@@ -313,12 +342,12 @@
 						<p class="copyright-text pull-left">Created by Autumn & Jeff Painter</p>
 						<p class="copyright-text pull-right"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
 						<!--<p class="copyright-text pull-right">Archaeology 101 &copy2020 Designed by Autumn and Jeff Painter</p>-->
-					</div>	<!-- End Of /.col-md-12 -->	
-				</div>	<!-- End Of /.row -->	
-			</div>	<!-- End Of /.container -->	
+					</div>	<!-- End Of /.col-md-12 -->
+				</div>	<!-- End Of /.row -->
+			</div>	<!-- End Of /.container -->
 		</div>	<!-- End Of /.footer-bottom -->
 	</footer> <!-- End Of Footer -->
-	
+
 	<a id="back-top" href="#"></a>
 </body>
 </html>
