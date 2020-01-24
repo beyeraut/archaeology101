@@ -280,8 +280,8 @@ var prehistoric = L.layerGroup();
 			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
 		mbUrl = 'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYmV5ZXJhdXQiLCJhIjoiY2lnM3hhMGthMjc5NHRqbTNvMmdtbHR4YiJ9.dP5gGJ59Hly_pleCOGkzQw';
 
-	var grayscale   = L.tileLayer(mbUrl, {id: 'mapbox/light-v9', attribution: mbAttr, maxZoom: 9, minZoom: 5}),
-		streets  = L.tileLayer(mbUrl, {id: 'mapbox/streets-v11',   attribution: mbAttr, maxZoom: 9, minZoom: 5});
+	var grayscale   = L.tileLayer(mbUrl, {id: 'mapbox/light-v9', attribution: mbAttr, maxZoom: 9, minZoom: 6}),
+		streets  = L.tileLayer(mbUrl, {id: 'mapbox/streets-v11',   attribution: mbAttr, maxZoom: 9, minZoom: 6});
 
 	var map = L.map('map', {
 		center: [39.917159, -89.115146],
