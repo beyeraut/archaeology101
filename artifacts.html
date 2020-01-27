@@ -47,6 +47,17 @@
       }
     });
   } );
+	  $( function() {
+    $( "#draggable2" ).draggable();
+    $( "#droppable2" ).droppable({
+      drop: function( event, ui ) {
+        $( this )
+          .addClass( "ui-state-highlight" )
+          .find( "p" )
+            .html( "Dropped!" );
+      }
+    });
+  } );
   </script>
 
 </head>
@@ -264,11 +275,19 @@
 							<h2>MORE COMING SOON!</h2>
 							<p>The Artifact Page will discuss what archaeologists find (studying people not dinos!). It will include two interactive games, a matching game, where users will match the definition of objects to an image and a game that allows the students to ‘unmask’ or ‘erase’ objects to see how perishable items would preserve after 1,000 years. The matching game will be built using the draggableJS library. The ‘unmasking’ game will be created by using EaselJS within the CreateJS library. </p>
 <div id="draggable" class="ui-widget-content">
-  <p>Drag me to my target</p>
+  <p>Artifact Description</p>
 </div>
  
 <div id="droppable" class="ui-widget-header">
-  <p>Drop here</p>
+  <p>Artifact Photo: Drop here</p>
+</div>
+
+<div id="draggable2" class="ui-widget-content">
+  <p>Artifact 2 Description</p>
+</div>
+ 
+<div id="droppable2" class="ui-widget-header">
+  <p>Artifact 2 Photo: Drop here</p>
 </div>
 							
 
