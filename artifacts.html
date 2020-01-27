@@ -256,6 +256,60 @@
 							<p>The Artifact Page will discuss what archaeologists find (studying people not dinos!). It will include two interactive games, a matching game, where users will match the definition of objects to an image and a game that allows the students to ‘unmask’ or ‘erase’ objects to see how perishable items would preserve after 1,000 years. The matching game will be built using the draggableJS library. The ‘unmasking’ game will be created by using EaselJS within the CreateJS library. </p>
 						
 							<script src="js/match.js"></script>
+							
+<script>
+{% import 'components/Block/Block.html' as Block %}
+
+{% macro render(id) %}
+  <section id="{{ id }}" class="{{ id }}">
+    <article class="BlockLayout BlockLayout--typeFlex">
+      <div class="BlockWrapper BlockWrapper--isDropzone draggable-dropzone--occupied" data-dropzone="1">
+        {{ Block.render('one', {type: 'Hollow'}) }}
+        {{ Block.render('one', {index: 1, draggable: true}) }}
+      </div>
+      <div class="BlockWrapper BlockWrapper--isDropzone draggable-dropzone--occupied" data-dropzone="2">
+        {{ Block.render('two', {type: 'Hollow'}) }}
+        {{ Block.render('two', {index: 2, draggable: true}) }}
+      </div>
+      <div class="BlockWrapper BlockWrapper--isDropzone draggable-dropzone--occupied" data-dropzone="4">
+        {{ Block.render('four', {type: 'Hollow'}) }}
+        {{ Block.render('four', {index: 4, draggable: true}) }}
+      </div>
+      <div class="BlockWrapper BlockWrapper--isDropzone draggable-dropzone--occupied" data-dropzone="8">
+        {{ Block.render('eight', {type: 'Hollow'}) }}
+        {{ Block.render('eight', {index: 8, draggable: true}) }}
+      </div>
+    </article>
+
+    <article class="BlockLayout BlockLayout--typeGrid">
+      <div class="BlockWrapper BlockWrapper--isDropzone" data-dropzone="1">
+        {{ Block.render('', {type: 'Stripes'}) }}
+      </div>
+      <div class="BlockWrapper BlockWrapper--isDropzone" data-dropzone="2">
+        {{ Block.render('', {type: 'Stripes'}) }}
+      </div>
+      <div class="BlockWrapper">
+        {{ Block.render('three', {index: 3, type: 'Shell'}) }}
+      </div>
+      <div class="BlockWrapper BlockWrapper--isDropzone" data-dropzone="4">
+        {{ Block.render('', {type: 'Stripes'}) }}
+      </div>
+      <div class="BlockWrapper">
+        {{ Block.render('five', {index: 5, type: 'Shell'}) }}
+      </div>
+      <div class="BlockWrapper">
+        {{ Block.render('six', {index: 6, type: 'Shell'}) }}
+      </div>
+      <div class="BlockWrapper">
+        {{ Block.render('seven', {index: 7, type: 'Shell'}) }}
+      </div>
+      <div class="BlockWrapper BlockWrapper--isDropzone" data-dropzone="8">
+        {{ Block.render('', {type: 'Stripes'}) }}
+      </div>
+    </article>
+  </section>
+{% endmacro %}
+							</script>
 
 						</div>
 					</div>	<!-- End of /.block -->
