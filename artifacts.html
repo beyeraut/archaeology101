@@ -32,17 +32,16 @@
       <style>
          .wrap {
             display: table-row-group;
-		padding:20 20 20 20 px;
-		 align: center;
-		 
+		padding:20 20 20 20 px;		 
          }
+	      
          #object1,#object2, #object3,#object4 { 
             width: 120px; height: 70px; padding: 0.5em; float: left;
             margin: 10px 10px 10px 10px; border:4px;
          }
          
          #object1match,#object2match,#object3match,#object4match { 
-            width: 140px; height: 100px;padding: 0.5em; float: left; 
+            width: 200px; height: 200px;padding: 0.5em; float: left; 
             margin: 10px 10px 10px 10px;  border: 4px solid #aaaaaa;
          }
       </style>
@@ -58,7 +57,7 @@
                   $( this )
                   .addClass( "ui-state-highlight" )
                   .find( "p" )
-                  .html( "Dropped!" );
+                  .html( "Correct Match!" );
                }
             });
 				
@@ -68,7 +67,7 @@
                   $( this )
                   .addClass( "ui-state-highlight" )
                   .find( "p" )
-                  .html( "Dropped!" );
+                  .html( "Correct Match!" );
                }
             });
 
@@ -81,7 +80,7 @@
                   $( this )
                   .addClass( "ui-state-highlight" )
                   .find( "p" )
-                  .html( "Dropped!" );
+                  .html( "Correct Match!" );
                }
             });
 				
@@ -91,7 +90,7 @@
                   $( this )
                   .addClass( "ui-state-highlight" )
                   .find( "p" )
-                  .html( "Dropped!" );
+                  .html( "Correct Match!" );
                }
             }); 
          });
