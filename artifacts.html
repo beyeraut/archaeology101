@@ -26,41 +26,73 @@
 	<script src="js/jquery.scrollUp.min.js"></script>
 	<script src="js/main.js" type="text/javascript"></script>
 	
-	  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	  <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      
+      <style>
+         .wrap {
+            display: table-row-group;
+         }
+         #japanpeople,#indiapeople, #javatutorial,#springtutorial { 
+            width: 120px; height: 70px; padding: 0.5em; float: left;
+            margin: 0px 5px 10px 0; 
+         }
+         
+         #japan,#india,#java,#spring { 
+            width: 140px; height: 100px;padding: 0.5em; float: left; 
+            margin: 10px;  
+         }
+      </style>
 
-	
-<style>
-  #draggable { width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
-  #droppable { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; }
-  #draggable2 { width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
-  #droppable2 { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; }
-  </style>
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script>
-  $( function() {
-    $( "#draggable" ).draggable();
-    $( "#droppable" ).droppable({
-      drop: function( event, ui ) {
-        $( this )
-          .addClass( "ui-state-highlight" )
-          .find( "artifact1" )
-            .html( "Dropped!" );
-      }
-    });
-  } );
-	  $( function() {
-    $( "#draggable2" ).draggable();
-    $( "#droppable2" ).droppable({
-      drop: function( event, ui ) {
-        $( this )
-          .addClass( "ui-state-highlight" )
-          .find( "artifact2" )
-            .html( "Dropped!" );
-      }
-    });
-  } );
-  </script>
+      <script>
+         $(function() {
+            $( "#japanpeople" ).draggable();
+            $( "#indiapeople" ).draggable();
+
+            $( "#japan" ).droppable({
+               accept: "#japanpeople",
+               drop: function( event, ui ) {
+                  $( this )
+                  .addClass( "ui-state-highlight" )
+                  .find( "p" )
+                  .html( "Dropped!" );
+               }
+            });
+				
+            $( "#india" ).droppable({
+               accept: "#indiapeople",
+               drop: function( event, ui ) {
+                  $( this )
+                  .addClass( "ui-state-highlight" )
+                  .find( "p" )
+                  .html( "Dropped!" );
+               }
+            });
+
+            $( "#javatutorial" ).draggable({scope : "java"});
+            $( "#springtutorial" ).draggable({scope : "spring"});
+				
+            $( "#java" ).droppable({
+               scope: "java",
+               drop: function( event, ui ) {
+                  $( this )
+                  .addClass( "ui-state-highlight" )
+                  .find( "p" )
+                  .html( "Dropped!" );
+               }
+            });
+				
+            $( "#spring" ).droppable({
+               scope: "spring",
+               drop: function( event, ui ) {
+                  $( this )
+                  .addClass( "ui-state-highlight" )
+                  .find( "p" )
+                  .html( "Dropped!" );
+               }
+            }); 
+         });
+      </script>
 
 </head>
 <body>
@@ -276,21 +308,41 @@
 						<div class="block-heading">
 							<h2>MORE COMING SOON!</h2>
 							<p>The Artifact Page will discuss what archaeologists find (studying people not dinos!). It will include two interactive games, a matching game, where users will match the definition of objects to an image and a game that allows the students to ‘unmask’ or ‘erase’ objects to see how perishable items would preserve after 1,000 years. The matching game will be built using the draggableJS library. The ‘unmasking’ game will be created by using EaselJS within the CreateJS library. </p>
-<div id="draggable" class="ui-widget-content">
-  <p id="artifact1">Artifact Description</p>
-</div>
- 
-<div id="droppable" class="ui-widget-header">
-  <p id="artifact1">Artifact Photo: Drop here</p>
-</div>
 
-<div id="draggable2" class="ui-widget-content">
-  <p id="artifact2">Artifact 2 Description</p>
-</div>
- 
-<div id="droppable2" class="ui-widget-header">
-  <p id="artifact2">Artifact 2 Photo: Drop here</p>
-</div>
+<div class = "wrap" >
+         <div id = "japanpeople" class = "ui-widget-content">
+            <p>People to be dropped to Japan</p>
+         </div>
+
+         <div id = "indiapeople" class = "ui-widget-content">
+            <p>People to be dropped to India</p>
+         </div>
+
+         <div id = "japan" class = "ui-widget-header">
+            <p>Japan</p>
+         </div>
+
+         <div id = "india" class = "ui-widget-header">
+            <p>India</p>
+         </div>
+      </div>
+      <hr/>
+         
+      <div class = "wrap" >
+         <div id = "javatutorial" class = "ui-widget-content">
+            <p>People who want to learn Java</p>
+         </div>
+         <div id = "springtutorial" class = "ui-widget-content">
+            <p>People who want to learn Spring</p>
+         </div>
+         <div id = "java" class = "ui-widget-header">
+            <p>Java</p>
+         </div>
+
+         <div id = "spring" class = "ui-widget-header">
+            <p>Spring</p>
+         </div>
+      </div>
 							
 
 						</div>
