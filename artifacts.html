@@ -71,11 +71,11 @@
                }
             });
 
-            $( "#object3" ).draggable();
-            $( "#object4" ).draggable();
+            $( "#object3" ).draggable({scope : "object3match"});
+            $( "#object4" ).draggable({scope : "object4match"});
 				
             $( "#object3match" ).droppable({
-               scope: "object3",
+               scope: "object3match",
                drop: function( event, ui ) {
                   $( this )
                   .addClass( "ui-state-highlight" )
@@ -85,7 +85,7 @@
             });
 				
             $( "#object4match" ).droppable({
-               scope: "object4",
+               scope: "object4match",
                drop: function( event, ui ) {
                   $( this )
                   .addClass( "ui-state-highlight" )
