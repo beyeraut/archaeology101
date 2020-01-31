@@ -15,14 +15,14 @@ $(document).ready(function() {
 		$(this).removeClass('open');
 	});
 
-	$("html").niceScroll({
-		cursorcolor : "#90c322",
-		cursorwidth : "10px" ,
-		zindex: 9999 ,
-		cursorborder: "none"	,
-		cursorborderradius : "0" ,
-		autohidemode: false,
-	});
+	//$("html").niceScroll({
+		//cursorcolor : "#90c322",
+		//cursorwidth : "10px" ,
+		//zindex: 9999 ,
+		//cursorborder: "none"	,
+		//cursorborderradius : "0" ,
+		//autohidemode: false,
+	//});
 	
 	// fade in #back-top
 
