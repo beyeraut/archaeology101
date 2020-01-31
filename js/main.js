@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	 // Owl carousel code
-	$('#slider').nivoSlider();
+	//$('#slider').nivoSlider();
 	
 	$("#owl-example").owlCarousel({
 	  	autoPlay : true
