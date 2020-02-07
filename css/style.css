@@ -405,7 +405,9 @@ header {
 
 /*	 Catagorie Start
     ==================================================*/
-	
+#catagorie {
+	height: auto;
+}
 	
 #catagorie .block {
 	margin-top: 5px;
