@@ -103,17 +103,17 @@
             $( "#object3" ).draggable({
     		revert: "invalid",
     		stop: function( event, ui )
-    		{scope : "object3match"}
+    		{}
 		});
 	    
 	    $( "#object4" ).draggable({
    		 revert: "invalid",
     		 stop: function( event, ui )
-   		 {scope : "object4match"}
+   		 {}
 		});
 	    				
             $( "#object3match" ).droppable({
-               scope: "object3match",
+               accept: "object3",
                hoverClass:  "hover",
                drop: function( event, ui ) {
                   $( this )
@@ -124,7 +124,7 @@
             });
 				
             $( "#object4match" ).droppable({
-               scope: "object4match",
+               accept: "object4",
                hoverClass:  "hover",
                drop: function( event, ui ) {
                   $( this )
@@ -233,7 +233,7 @@
 				<div class="col-md-12">
 					<div class="block">
 						<div class="block-heading">
-							<h2>What Do Archaeologists Find?</h2>
+							<h2>What Do Archaeologists Find?!</h2>
 							
 						</div>
 					</div>	<!-- End of /.block -->
