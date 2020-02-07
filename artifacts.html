@@ -62,8 +62,21 @@
 	
       <script>
          $(function() {
-            $( "#object1" ).draggable();
-            $( "#object2" ).draggable();
+            $( "#object1" ).draggable({
+    		revert: "invalid",
+    		stop: function( event, ui )
+    		{
+    		   // whatever
+    		}
+		});
+            
+	     $( "#object2" ).draggable({
+   		 revert: "invalid",
+    		 stop: function( event, ui )
+   		 {
+    		   // whatever
+   		 }
+		});
 
             $( "#object1match" ).droppable({
                accept: "#object1",
