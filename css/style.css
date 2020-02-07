@@ -4,7 +4,7 @@ body { font-family: 'Open Sans', sans-serif; color: #555; font-size: 18px; font-
 li { list-style: none;}
 a:hover { text-decoration: none; }
 
-.container {
+#container {
 	height: auto;
 }
 
