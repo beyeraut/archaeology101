@@ -49,6 +49,15 @@
             width: 500px; height: 200px;padding: 0.5em; float: left; 
             margin: 10px 10px 10px 10px;  border: 4px solid #aaaaaa;
          }
+	      
+	 .active {
+            border-color : blue;
+            background : grey;
+         }  
+         .hover {
+            border-color : red;
+            background : green;
+         }
       </style>
 	
       <script>
@@ -58,6 +67,8 @@
 
             $( "#object1match" ).droppable({
                accept: "#object1",
+	       activeClass: "active",
+               hoverClass:  "hover",
                drop: function( event, ui ) {
                   $( this )
                   .addClass( "ui-state-highlight" )
@@ -68,6 +79,8 @@
 				
             $( "#object2match" ).droppable({
                accept: "#object2",
+	       activeClass: "active",
+               hoverClass:  "hover",
                drop: function( event, ui ) {
                   $( this )
                   .addClass( "ui-state-highlight" )
@@ -81,6 +94,8 @@
 				
             $( "#object3match" ).droppable({
                scope: "object3match",
+	       activeClass: "active",
+               hoverClass:  "hover",
                drop: function( event, ui ) {
                   $( this )
                   .addClass( "ui-state-highlight" )
@@ -91,6 +106,8 @@
 				
             $( "#object4match" ).droppable({
                scope: "object4match",
+	       activeClass: "active",
+               hoverClass:  "hover",
                drop: function( event, ui ) {
                   $( this )
                   .addClass( "ui-state-highlight" )
