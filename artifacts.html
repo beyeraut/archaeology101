@@ -100,9 +100,18 @@
                }
             });
 
-            $( "#object3" ).draggable({scope : "object3match"});
-            $( "#object4" ).draggable({scope : "object4match"});
-				
+            $( "#object3" ).draggable({
+    		revert: "invalid",
+    		stop: function( event, ui )
+    		{scope : "object3match"}
+		});
+	    
+	    $( "#object4" ).draggable({
+   		 revert: "invalid",
+    		 stop: function( event, ui )
+   		 {scope : "object4match"}
+		});
+	    				
             $( "#object3match" ).droppable({
                scope: "object3match",
                hoverClass:  "hover",
