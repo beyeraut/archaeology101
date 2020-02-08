@@ -77,6 +77,22 @@
     		   // whatever
    		 }
 		});
+		 
+	     $( "#object3" ).draggable({
+    		revert: "invalid",
+    		stop: function( event, ui )
+    		{
+    		   // whatever
+    		}
+		});
+		 
+	    $( "#object4" ).draggable({
+   		 revert: "invalid",
+    		 stop: function( event, ui )
+   		 {
+		 //whatever
+		 }
+		});
 
             $( "#object1match" ).droppable({
                accept: "#object1",
@@ -99,22 +115,6 @@
                   .html( "Correct Match!" );
                }
             });
-
-            $( "#object3" ).draggable({
-    		revert: "invalid",
-    		stop: function( event, ui )
-    		{
-		//whatever
-		}
-		});
-	    
-	    $( "#object4" ).draggable({
-   		 revert: "invalid",
-    		 stop: function( event, ui )
-   		 {
-		 //whatever
-		 }
-		});
 	    				
             $( "#object3match" ).droppable({
                accept: "object3",
