@@ -74,15 +74,8 @@
    		 }
 		});
 		 
-	     $( "#object3match" ).draggable({
-		scope : "object3",
-    	
-		});
-		 
-	    $( "#object4match" ).draggable({
-		 scope : "object4",
-   		
-		});
+	    $( "#object3" ).draggable({scope : "object3match"});	 
+	    $( "#object4" ).draggable({scope : "object4match"});
 
             $( "#object1match" ).droppable({
                accept: "#object1",
@@ -108,7 +101,7 @@
 	    				
             $( "#object3match" ).droppable({
                scope: "object3match",
-               hoverClass:  "hover",
+              // hoverClass:  "hover",
                drop: function( event, ui ) {
                   $( this )
                   .addClass( "ui-state-highlight" )
@@ -119,7 +112,7 @@
 				
             $( "#object4match" ).droppable({
                scope: "object4match",
-               hoverClass:  "hover",
+               // hoverClass:  "hover",
                drop: function( event, ui ) {
                   $( this )
                   .addClass( "ui-state-highlight" )
@@ -227,7 +220,7 @@
 				<div class="col-md-12">
 					<div class="block">
 						<div class="block-heading">
-							<h2>What Do Archaeologists Find???</h2>
+							<h2>What Do Archaeologists Find?</h2>
 							
 						</div>
 					</div>	<!-- End of /.block -->
