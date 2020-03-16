@@ -10,10 +10,22 @@ a:hover { text-decoration: none; }
 
 FIGURE, FIGCAPTION {
 
-display: inline-block;
+display: block;
 font-style: italic;
 font-variant: small-caps;
 
+}
+
+figure {
+    border: 1px dotted gray;
+}
+figure img {
+    vertical-align: top;
+}
+
+figure figcaption {
+    border: 1px dotted blue;
+    text-align: center;
 }
 
 
