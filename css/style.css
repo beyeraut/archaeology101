@@ -10,7 +10,7 @@ a:hover { text-decoration: none; }
 
 FIGURE, FIGCAPTION {
 
-display: block;
+display: inline-block;
 font-style: italic;
 font-variant: small-caps;
 
