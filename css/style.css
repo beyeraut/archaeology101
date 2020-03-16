@@ -8,6 +8,14 @@ a:hover { text-decoration: none; }
 	height: auto;
 }
 
+FIGURE, FIGCAPTION {
+
+display: block;
+font-style: italic;
+font-variant: small-caps;
+
+}
+
 
 /*Headers*/
 h1,h2,h3,h4,h5,h6 { font-family: 'Yanone Kaffeesatz', sans-serif;color: #555}
