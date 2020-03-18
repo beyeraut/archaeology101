@@ -27,10 +27,11 @@ figure figcaption {
 figure {
     border: thin #c0c0c0 solid;
     padding: 5px;
-    max-width: 1000px;
-    max-height: 600px;
     margin: auto;
 }
+
+/*max-width: 1000px;
+    max-height: 600px;  */
 	
 
 figcaption {
