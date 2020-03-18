@@ -10,7 +10,7 @@ a:hover { text-decoration: none; }
 
 FIGURE, FIGCAPTION {
 
-display: block;
+/* display: block;
 font-style: italic;
 font-variant: small-caps;
 }
@@ -20,6 +20,25 @@ figure img {
 }
 
 figure figcaption {
+    text-align: center;
+}  */
+	
+
+figure {
+    border: thin #c0c0c0 solid;
+    display: flex;
+    flex-flow: column;
+    padding: 5px;
+    max-width: 220px;
+    margin: auto;
+}
+	
+
+figcaption {
+    background-color: #222;
+    color: #fff;
+    font: italic smaller sans-serif;
+    padding: 3px;
     text-align: center;
 }
 
