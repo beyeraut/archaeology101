@@ -588,6 +588,10 @@ header {
   width: 50%;
 }
 
+.right {
+   float: right;
+}
+
 .capcenter {
   display: block;
   margin-left: auto;
