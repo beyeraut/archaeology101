@@ -594,6 +594,10 @@ header {
    float: right;
 }
 
+.left {
+   float: left;
+}
+
 .capcenter {
   display: block;
   margin-left: auto;
