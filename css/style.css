@@ -8,9 +8,9 @@ a:hover { text-decoration: none; }
 	height: auto;
 }
 
-FIGURE, FIGCAPTION {
+/*  FIGURE, FIGCAPTION {
 
-/* display: block;
+ display: block;
 font-style: italic;
 font-variant: small-caps;
 }
