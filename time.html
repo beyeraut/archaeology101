@@ -30,6 +30,14 @@
 	<script src="js/jquery.scrollUp.min.js"></script>
 	<script src="js/main.js" type="text/javascript"></script>
  <style>
+#myDIV {
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  background-color: lightblue;
+  margin-top: 20px;
+}
+	 
             .container .box {
                 width:1000px;
 		height:30%;
@@ -276,6 +284,25 @@ pdf/2011/05/Coca-Cola_125_years_booklet.pdf</figcaption>
 			</figure>
 			</p>
 		<p style="padding: 0% 10% 2%; font-size: 22px">Look at the ways that the shape of the bottle changed, as well as the material the bottles were made out of. Over time, Coke bottles changed to have a different shape (from straight sides to curved sides), and switched from being made of out glass to being made out of plastic or metal. Based on these changes, archaeologists can suggest an age for a site based on what types of Coke bottles are found there. For example, if you found a bunch of brown glass Coke bottles with straight sides at a site, but no other kinds of bottles, in what years do you think people lived at that site? </p>
+		
+		<button onclick="myFunction()">Try it</button>
+
+<div id="myDIV">
+This is my DIV element.
+</div>
+
+<p><b>Note:</b> The element will not take up any space when the display property set to "none".</p>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
 
 </div>
 
