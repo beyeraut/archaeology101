@@ -2,7 +2,11 @@
 
 body { font-family: 'Open Sans', sans-serif; color: #555; font-size: 18px; font-weight: 300; }
 li { list-style: none;}
-a:hover { text-decoration: none; }
+/*a:hover { text-decoration: none; }*/
+
+a {
+  color: #90c322;
+}
 
 /* unvisited link */
 a:link {
