@@ -4,6 +4,17 @@ body { font-family: 'Open Sans', sans-serif; color: #555; font-size: 18px; font-
 li { list-style: none;}
 a:hover { text-decoration: none; }
 
+/* unvisited link */
+a:link {
+  color: #90c322;
+}
+
+/* mouse over link */
+a:hover {
+  color: #68c322;
+}
+
+
       button {
       display: inline-block;
       background-color: #LightGrey;
