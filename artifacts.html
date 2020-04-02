@@ -136,9 +136,15 @@
                }
             });
          });
+var artifact
+$(document).ready(function() {
+  artifact=$("#source artifact").draggable({
+    helper: "clone",
+    revert: "invalid"
+  });
 	      
-	     function reset() {
-  li.appendTo("#source")
+function reset() {
+  artifact.appendTo("#source")
 }
       </script>
 
@@ -267,8 +273,9 @@
 <section>
 	<div class="container">
 		<center>
-			<div class = "wrap" >
+			<div class = "wrap">
 <!-- OBJECT PHOTOS - DRAGGING OPTIONS -->
+				<div class ="artifact" id="source">
 				<!--Object 1-->
 				<div id = "object1" class = "ui-widget-content">
         	<p><img src="images/ceramic.jpg" width=100%></p>
@@ -286,6 +293,7 @@
           <p><img src="images/bricks.jpg" width=100%></p>
         </div>
 			</div> <!--wrap-->
+			</div><!--artifact-->
 		</center>
 <!--OBJECT DEFINITIONS - DROP AREA-->
 	<center>
