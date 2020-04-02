@@ -138,7 +138,7 @@
          });
 var div
 $(document).ready(function() {
-  div=$("#source artifact").draggable({
+  div=$("#source wrap").draggable({
     helper: "clone",
     revert: "invalid"
   });
@@ -272,10 +272,9 @@ function reset() {
 
 <section>
 	<div class="container">				
-		<div class ="artifact" id="source">
 
 		<center>
-			<div class = "wrap">
+			<div class = "wrap" id="source">
 <!-- OBJECT PHOTOS - DRAGGING OPTIONS -->
 				<!--Object 1-->
 				<div id = "object1" class = "ui-widget-content">
@@ -295,7 +294,6 @@ function reset() {
         </div>
 			</div> <!--wrap-->
 		</center>
-						</div><!--artifact-->
 
 <!--OBJECT DEFINITIONS - DROP AREA-->
 	<center>
