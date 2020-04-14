@@ -44,20 +44,6 @@ integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIpt
     position:"fixed";
     padding-bottom: 50px;
 	
-	/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
 
 /* Modal Content */
 .modal-content {
@@ -269,13 +255,38 @@ integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIpt
 
 		    
 <!-- Trigger/Open The Modal-->
-	<center><button id="myBtn2" href="#myModal2">Dig Deeper</button></center><br><br><br>
+	
+	<center><button type="button" href="#myModal2" id="myBtn2" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  Dig Deeper
+</button></center><br><br><br>
+	
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+	
 	
 
-<!-- The Modal -->
+<!-- The Modal 
 <div id="myModal2" class="modal">
 
-  <!-- Modal content -->
+  <!-- Modal content 
   <div id="myModal2" class="modal-content" >
     <span class="close">&times;</span>
 	  <center><h3>Dig Deeper into Finding Archaeological Sites</h3></center>
@@ -316,7 +327,7 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
-</script>
+</script>-->
 	
 
 	
