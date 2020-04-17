@@ -12,7 +12,7 @@
 
 .dropup .dropdown-menu,.navbar-fixed-bottom .dropdown .dropdown-menu{top:auto;bottom:100%;margin-bottom:1px}@media(min-width:768px){.navbar-right .dropdown-menu{right:0;left:auto}}
 
-*//*!.btn-default .caret{border-top-color:#333}
+/*!.btn-default .caret{border-top-color:#333}
 
 .btn-primary .caret,.btn-success .caret,.btn-warning .caret,.btn-danger .caret,.btn-info .caret{border-top-color:#fff}
 
