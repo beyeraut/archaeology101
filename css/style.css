@@ -39,8 +39,9 @@ a:hover {
       position: relative;
       transition: 0.5s;
       }
+
+/*      content: '\00bb';*/
       button span:after {
-      content: '\00bb';
       position: absolute;
       opacity: 0;
       top: 0;
