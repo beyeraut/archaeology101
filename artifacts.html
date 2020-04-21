@@ -82,19 +82,19 @@
             background : green;
          }
 	      
-	         #object1match.drop {
+	         #object1match.ui-state-highlight {
             border-color : Black;
             background : green;
          }
-	       #object2match.drop {
+	       #object2match.ui-state-highlight {
             border-color : Black;
             background : green;
          }
-	       #object3match.drop {
+	       #object3match.ui-state-highlight {
             border-color : Black;
             background : green;
          }
-	       #object4match.drop {
+	       #object4match.ui-state-highlight {
             border-color : Black;
             background : green;
          }
@@ -140,7 +140,6 @@
 
             $( "#object1match" ).droppable({
                accept: "#object1",
-	       
                hoverClass:  "hover",
                drop: function( event, ui ) {
                   $( this )
@@ -152,7 +151,6 @@
 
             $( "#object2match" ).droppable({
                accept: "#object2",
-		   dropClass: "drop", 
                hoverClass:  "hover",
                drop: function( event, ui ) {
                   $( this )
@@ -164,8 +162,6 @@
 
             $( "#object3match" ).droppable({
                accept: "#object3",
-		 		   dropClass: "drop", 
-
 	       hoverClass:  "hover",
                drop: function( event, ui ) {
                   $( this )
@@ -177,8 +173,6 @@
 
             $( "#object4match" ).droppable({
                accept: "#object4",
-		    		   dropClass: "drop", 
-
                hoverClass:  "hover",
                drop: function( event, ui ) {
                   $( this )
