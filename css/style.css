@@ -99,7 +99,7 @@ a:hover {
       }
 
 .button3 {
-  background-color: honeydew; 
+  background-color: white; 
   color: black; 
   width:fit-content;
   font-size:16px;
@@ -108,7 +108,7 @@ a:hover {
 
 .button3:hover {
   background-color: #90c322;
-  color: white;
+  color: black;
 }
      
 
