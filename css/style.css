@@ -101,6 +101,7 @@ a:hover {
 .button3 {
   background-color: white; 
   color: black; 
+  width: 700px;
   font-size: 12px;
   border: 2px solid #90c322;
 }
