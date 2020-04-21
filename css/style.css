@@ -99,11 +99,11 @@ a:hover {
       }
 
 .button3 {
-  background-color: white; 
+  background-color: honeydew; 
   color: black; 
   width:fit-content;
-  font-size: 12px;
-  border: 2px solid #90c322;
+  font-size:14px;
+  border:none
 }
 
 .button3:hover {
