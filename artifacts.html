@@ -140,6 +140,7 @@
 
             $( "#object1match" ).droppable({
                accept: "#object1",
+	       acceptClass: "accept",
                hoverClass:  "hover",
                drop: function( event, ui ) {
                   $( this )
@@ -151,6 +152,7 @@
 
             $( "#object2match" ).droppable({
                accept: "#object2",
+	       acceptClass: "accept",
                hoverClass:  "hover",
                drop: function( event, ui ) {
                   $( this )
@@ -162,7 +164,8 @@
 
             $( "#object3match" ).droppable({
                accept: "#object3",
-               hoverClass:  "hover",
+               acceptClass: "accept",
+	       hoverClass:  "hover",
                drop: function( event, ui ) {
                   $( this )
                   .addClass( "ui-state-highlight" )
@@ -173,6 +176,7 @@
 
             $( "#object4match" ).droppable({
                accept: "#object4",
+	       acceptClass: "accept",
                hoverClass:  "hover",
                drop: function( event, ui ) {
                   $( this )
