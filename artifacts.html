@@ -263,8 +263,28 @@
 	<center><h3 style="padding: 0% 10% 2%">Artifact Matching Game</h3>
 	<p style="padding: 0% 2% 2%; font-size: 22px">Can you match the artifact to its description in the boxes below? <br><b>Drag and drop the artifacts to find out if you are correct!</b><br>
 		
-		<a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="To play the matching game on a mobile device: 1) Press and hold the artifact photo you wish to match 2) Double tap where you wish to place the image.">Mobile Game Instructions</a>
+		<center><button onclick="myFunction()">Mobile Game Instructions</button></center>
+		
 
+<center><div id="myDIV" style="display:none;">
+	<p style="font-size: 22px">To play the matching game on a mobile device: 1) Press and hold the artifact photo you wish to match 2) Double tap where you wish to place the image.</p>
+	</div></center>
+	<div style="height: 20px">
+	<!--adding space at bottom-->
+	</div>
+		
+		</center></div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
 
 		
 		</p></center>
