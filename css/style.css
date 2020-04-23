@@ -5,17 +5,17 @@ li { list-style: none;}
 /*a:hover { text-decoration: none; }*/
 
 a {
-  color: #90c322;
+  color: #54a317;
 }
 
 /* unvisited link */
 a:link {
-  color: #90c322;
+  color: #54a317;
 }
 
 /* mouse over link */
 a:hover {
-  color: #68c322;
+  color: #90c322;
 }
 
 
