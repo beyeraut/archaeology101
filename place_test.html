@@ -249,31 +249,12 @@
 	mapboxgl.accessToken = 'pk.eyJ1IjoiYmV5ZXJhdXQiLCJhIjoiY2lnM3hhMGthMjc5NHRqbTNvMmdtbHR4YiJ9.dP5gGJ59Hly_pleCOGkzQw';
 var map = new mapboxgl.Map({
 container: 'map',
-style: 'mapbox://styles/mapbox/light-v10',
-zoom: 13,
+style: 'mapbox://styles/beyeraut/cka46uq3t0fej1ioiu3yqgwo2',
+zoom: 5,
 center: [-122.447303, 37.753574]
 });
  
-map.on('load', function() {
-map.addSource('mapbox-terrain', {
-type: 'vector',
-url: 'mapbox://beyeraut.ckcp3sje707wq22n064urf6em-70na7' 
-});
-map.addLayer({
-'id': 'historic_archaeology101',
-'type': 'point',
-'source': 'mapbox-terrain',
-'source-layer': 'contour',
-'layout': {
-'line-join': 'round',
-'line-cap': 'round'
-},
-'paint': {
-'line-color': '#ff69b4',
-'line-width': 1
-}
-});
-});
+
 </script>
 		
 </section>
