@@ -32,13 +32,10 @@
 	<script src="js/main.js" type="text/javascript"></script>
 
 	<!--Map-->
- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-   crossorigin=""/>
- <!-- Make sure you put this AFTER Leaflet's CSS -->
- <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-   crossorigin=""></script>
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet' />
+
 
    <style>
 #map {
@@ -294,99 +291,18 @@ window.onclick = function(event) {
 <!--MAP SECTION-->
 	<section style="padding: 0px 0px 30px 0px">
 	<center><div id='map' style="width:85%; height:600px;"></div>
-	<script>
-
-	var orangeIcon = new L.Icon({
-  		iconUrl: 'images/orangeIcon.png',
- 		shadowUrl: 'images/trowel-shadow.png',
-  		iconSize: [25, 41],
-  		iconAnchor: [12, 41],
-  		popupAnchor: [1, -34],
-  		shadowSize: [41, 41]
-		});
-	var purpleIcon = new L.Icon({
-  		iconUrl: 'images/purpleIcon.png',
- 		shadowUrl: 'images/trowel-shadow.png',
-  		iconSize: [25, 41],
-  		iconAnchor: [12, 41],
-  		popupAnchor: [1, -34],
-  		shadowSize: [41, 41]
-		});
-
-	var historic = L.layerGroup();
-
-	L.marker([39.797708, -89.645794], {icon: orangeIcon}).addTo(historic).bindPopup('<b><a href="https://www.nps.gov/liho/index.htm" target="_blank">Lincoln Home National Historic Site</a></b><br>The home of Abraham Lincoln from 1844 to 1861, before he became the 16th President of the United States.<br><center><a title="George Longenecker [CC BY-SA (https://creativecommons.org/licenses/by-sa/4.0)]" href="https://commons.wikimedia.org/wiki/File:Abraham_Lincoln_Home.jpg"><img width="75%" border="5" alt="Angled shot of the Linclon Home in summer" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Abraham_Lincoln_Home.jpg/512px-Abraham_Lincoln_Home.jpg"></a></center>'),
-
-	L.marker([37.968945, -89.910186], {icon: orangeIcon}).addTo(historic).bindPopup('<b><a href="https://www2.illinois.gov/dnrhistoric/Experience/Sites/Southwest/Pages/Fort-Kaskaskia.aspx" target="_blank">Fort Kaskaskia State Historic Site</a></b><br>Fort Kaskaskia was built by French settlers around 1759 to defend the town of Kaskaskia, a major trading center at that time and the first capital city of the state of Illinois.<br><center><a title="Kbh3rd [CC BY-SA (https://creativecommons.org/licenses/by-sa/3.0)]" href="https://commons.wikimedia.org/wiki/File:Fort_Kaskaskia_082.jpg"><img width="75%" alt="Hilly landscape at Fort Kaskaskia, with sign in background" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Fort_Kaskaskia_082.jpg/512px-Fort_Kaskaskia_082.jpg"></a></center>'),
-
-	L.marker([41.321176, -89.000261], {icon: orangeIcon}).addTo(historic).bindPopup('<b><a href="https://www.dnr.illinois.gov/Parks/Pages/StarvedRock.aspx" target="_blank">Starved Rock State Park</a></b><br>A popular hiking destination today, in the past Native Americans from the Illinois tribe and earlier groups camped and built villages here. In 1682, the French built Fort St. Louis on top of Starved Rock because of its position above the Illinois River.<br><center><a title="Chris Light at English Wikipedia [CC BY-SA (https://creativecommons.org/licenses/by-sa/3.0)]" href="https://commons.wikimedia.org/wiki/File:Starved_Rock_Illinois_on_Illinois_River.jpg"><img width="75%" alt="Starved Rock from the opposite shore of the Illinois River" src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Starved_Rock_Illinois_on_Illinois_River.jpg"></a></center>'),
-
-	L.marker([40.401428, -88.669235], {icon: orangeIcon}).addTo(historic).bindPopup('<b><a href="https://www.facebook.com/grandvillagekickapoo" target="_blank">Grand Village of the Kickapoo Park</a></b><br>The location of an important historic Kickapoo village. It was occupied until 1813, when the village was burned by the U.S. military.<br><center><a title="Boscophotos [CC BY-SA (https://creativecommons.org/licenses/by-sa/3.0)]" href="https://commons.wikimedia.org/wiki/File:Image_Grand_Village_of_the_Kickapoo.jpeg"><img width="75%" alt="Landscape of Grand Village of the Kickapoo Park, with interpretive sign in the foreground" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Image_Grand_Village_of_the_Kickapoo.jpeg/512px-Image_Grand_Village_of_the_Kickapoo.jpeg"></a></center>'),
-
-	L.marker([39.380501, -88.210072], {icon: orangeIcon}).addTo(historic).bindPopup('<b><a href="http://www.lincolnlogcabin.org/" target="_blank">Lincoln Log Cabin State Historic Site</a></b><br>Presents information regarding life on the Illinois prairie in the 1800s, including a reconstruction of the home of Thomas and Sarah Bush Lincoln, the past landowners and the father and step-mother of Abraham Lincoln.<br><center><a title="Daniel Schwen [CC BY-SA (https://creativecommons.org/licenses/by-sa/4.0)]" href="https://commons.wikimedia.org/wiki/File:Lincoln_Log_Cabin_2.jpg"><img width="75%" alt="Black, grey, and white log cabin with central chimney" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Lincoln_Log_Cabin_2.jpg/512px-Lincoln_Log_Cabin_2.jpg"></a></center>'),
-
-	L.marker([40.645078, -89.606418], {icon: orangeIcon}).addTo(historic).bindPopup('<b><a href="https://www.illinoisriverroad.org/places/united-states/illinois/creve-coeur/nature-outdoor-recreation/fort-crevecoeur-park/" target="_blank">Fort Crevecoeur</a></b><br>Built in 1680, Fort Crevecoeur was the first large public building built by Europeans in the area of Illinois. It was destroyed a few months later as French expeditions left the area.<br><center><a href="https://en.wikipedia.org/wiki/File:Fort_Crevecoeur_Illinois_Historical_Society.jpg#/media/File:Fort_Crevecoeur_Illinois_Historical_Society.jpg"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/40/Fort_Crevecoeur_Illinois_Historical_Society.jpg/1200px-Fort_Crevecoeur_Illinois_Historical_Society.jpg" alt="black and white drawing of historic Fort Crevecoeur" width="75%" title="By John Leonard Conger and William Edgar Hull History of the Illinois river valley</a> Publisher - Chicago, IL: S. J. Clarke, p. 111. PD-US."></a></center>'),
-
-	L.marker([39.978686, -89.847198], {icon: orangeIcon}).addTo(historic).bindPopup('<b><a href="https://www.lincolnsnewsalem.com/" target="_blank">Lincoln&rsquo;s New Salem State Historic Site</a></b><br>Reconstruction of the village of New Salem, where young Abraham Lincoln lived from 1831 to 1837. The town was largely abandoned by 1840 as other towns expanded nearby.<br><center><a title="Eugenefbanks [CC BY-SA (https://creativecommons.org/licenses/by-sa/4.0)]" href="https://commons.wikimedia.org/wiki/File:Lincoln_Statue_NewSalem-IL.jpg"><img width="75%" alt="Metal statue of Abraham Lincoln as a rail-splitter, outside of Lincolns New Salem" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Lincoln_Statue_NewSalem-IL.jpg/256px-Lincoln_Statue_NewSalem-IL.jpg"></a></center>'),
-
-	L.marker([38.802876, -90.102063], {icon: orangeIcon}).addTo(historic).bindPopup('<b><a href="http://www.campdubois.com/" target="_blank">Lewis and Clark State Historic Site</a></b><br>Home to Camp Dubois, Lewis and Clark&#39s winter camp in 1803 and 1804. At Camp Dubois, the Lewis and Clark Expedition prepared for their trek through the western U.S.<br><center><a title="Chris Light at English Wikipedia [CC BY-SA (https://creativecommons.org/licenses/by-sa/3.0)]" href="https://commons.wikimedia.org/wiki/File:Camp_Dubois_Wood_River_Illinois.JPG"><img width="75%" alt="log reconstruction of Camp Dubois at Lewis and Clark State Park" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Camp_Dubois_Wood_River_Illinois.JPG/512px-Camp_Dubois_Wood_River_Illinois.JPG"></a></center>'),
-
-	L.marker([42.318130, -90.214667], {icon: orangeIcon}).addTo(historic).bindPopup('<b><a href="http://www.appleriverfort.org/" target="_blank">Apple River Fort State Historic Site</a></b><br>Built in 1832, this fort was constructed to protect settlers during the 1832 Black Hawk War, during which Native Americans fought against settlers in northwest Illinois to reclaim their land.<br><center><a href="https://commons.wikimedia.org/wiki/File:Elizabeth_Il_Apple_River_Fort2.JPG#/media/File:Elizabeth_Il_Apple_River_Fort2.JPG"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Elizabeth_Il_Apple_River_Fort2.JPG/1200px-Elizabeth_Il_Apple_River_Fort2.JPG" alt="log reconstruction of Apple River Fort, including log walls and tall building" width="75%" title="By IvoShandor Own Work CC BY -SA 3.0"></a></center>'),
-
-	L.marker([39.698241, -90.960990], {icon: orangeIcon}).addTo(historic).bindPopup('<b><a href="https://www.nps.gov/articles/archeology-of-new-philadelphia.htm" target="_blank">New Philadelphia Town National Historic Site</a></b><br>Founded by Frank McWorter in 1836, New Philadelphia was the first town in the U.S. to be founded by an African American. It was occupied until around 1900, and may have served as a station on the Underground Railroad before the Civil War.<br><center><a href="https://commons.wikimedia.org/wiki/File:New_Philadelphia_townsite.jpg#/media/File:New_Philadelphia_townsite.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/New_Philadelphia_townsite.jpg/1200px-New_Philadelphia_townsite.jpg" width="75%" alt="green agricultural field where New Philadelphia once stood" title="By Nyttend (Own work) Licensed for Public Domain"></a></center>');
-
-var prehistoric = L.layerGroup();
-
-	L.marker([38.655052, -90.061710], {icon: purpleIcon}).bindPopup('<b><a href="https://cahokiamounds.org/" target="_blank">Cahokia Mounds State Historic Site & Interpretive Center</a></b><br>Occupied from A.D. 1050 to around 1400, Cahokia was the largest pre-contact Native American city in the U.S., housing a population of up to 15,000 people at its peak. Monks Mound, the largest earthen mound buit at the site, rivals the Great Pyramids in Egypt in size.<br><center><a title="QuartierLatin1968 [CC BY-SA (https://creativecommons.org/licenses/by-sa/3.0)]" href="https://commons.wikimedia.org/wiki/File:Monks_Mound_Cahokia_3963a.jpg"><img width="75%" alt="Monks mound in the distance, at Cahokia State Historic Site" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Monks_Mound_Cahokia_3963a.jpg/512px-Monks_Mound_Cahokia_3963a.jpg"></a></center>').addTo(prehistoric),
-
-	L.marker([38.062808, -90.063806], {icon: purpleIcon}).bindPopup('<b><a href="https://en.wikipedia.org/wiki/Modoc_Rock_Shelter" target="_blank">Modoc Rockshelter National Historic Site</a></b><br>Native Americans camped at the base of this cliff overhang for thousands of years prior to Europeans. People first began camping at this site over 9,000 years ago, and used this space irregularly for over 5,000 years.<br><center><a title="Nyttend [Public domain]" href="https://commons.wikimedia.org/wiki/File:Modoc_Rock_Shelter.jpg"><img width="75%" alt="white limestone rock face with interpretive signs" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Modoc_Rock_Shelter.jpg/256px-Modoc_Rock_Shelter.jpg"></a></center>').addTo(prehistoric),
-
-	L.marker([37.082340, -88.491967], {icon: purpleIcon}).bindPopup('<b><a href="https://kincaidmounds.com/" target="_blank">Kincaid Mounds State Historic Site</a></b><br>Occupied a few different times by Native Americans, it was primarily occupied between A.D. 1050-1400 and was the location of a small city. Residents built large earthen mounds upon which special buildings were constructed, as well as a large wooden wall for protection.<br><center><a title="Heironymous Rowe [CC BY-SA (https://creativecommons.org/licenses/by-sa/3.0)]" href="https://commons.wikimedia.org/wiki/File:Kincaid_Site_mounds_HRoe_03.jpg"><img width="75%" alt="four Native American earthen mounds seen from the interpretive platform at Kincaid Mounds" src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Kincaid_Site_mounds_HRoe_03.jpg"></a></center>').addTo(prehistoric),
-
-	L.marker([40.350599, -90.115716], {icon: purpleIcon}).bindPopup('<b><a href="http://www.illinoisstatemuseum.org/content/welcome-dickson-mounds" target="_blank">Dickson Mounds Museum</a></b><br>Now represented by a large museum, this site was once a Native American village and cemetery that was used between A.D. 800 and 1250.<br><center><a title="MattHucke [CC BY-SA (https://creativecommons.org/licenses/by-sa/3.0)]" href="https://commons.wikimedia.org/wiki/File:Dickson-museum.jpg"><img width="75%" alt="Red and Black museum building in the shape of earthen mound" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Dickson-museum.jpg/512px-Dickson-museum.jpg"></a></center>').addTo(prehistoric),
-
-	L.marker([37.890564, -89.638612], {icon: purpleIcon}).bindPopup('<b><a href="https://www.dnr.illinois.gov/publications/Documents/00000096.pdf" target="_blank">Piney Creek Ravine Nature Preserve</a></b><br>Hidden in a forested ravine in southern Illinois, two isolated cliffs preserve rock art drawings made by Native Americans hundreds of years ago.<br><center><a title="Mrostrichman [CC BY-SA (https://creativecommons.org/licenses/by-sa/4.0)]" href="https://commons.wikimedia.org/wiki/File:Piney_Creek_Ravine_Nature_Preserve_Rock_Face.jpg"><img width="75%" alt="Grey rock face overhung with plants, trees in the foreground" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Piney_Creek_Ravine_Nature_Preserve_Rock_Face.jpg/512px-Piney_Creek_Ravine_Nature_Preserve_Rock_Face.jpg"></a></center>').addTo(prehistoric),
-
-	L.marker([41.780748, -90.229310], {icon: purpleIcon}).bindPopup('<b><a href="http://albanymounds.com/" target="_blank">Albany Mounds State Historic Site</a></b><br>Occupied between 200 B.C. and A.D. 300, this complex of over 90 earthen mounds served as a religious center and cemetery for pre-contact Native American groups collectively known as Hopewell.<br><center><p><a href="https://commons.wikimedia.org/wiki/File:Image_Mound_at_Albany_Mounds.jpeg#/media/File:Image_Mound_at_Albany_Mounds.jpeg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Image_Mound_at_Albany_Mounds.jpeg/1200px-Image_Mound_at_Albany_Mounds.jpeg" width="75%" alt="Native American earthen mound covered in prairie grass, trees in background" title="By Boscophotos Own Work CC BY-SA 3.0"></a></p></center>').addTo(prehistoric),
-
-	L.marker([40.304979, -90.063721], {icon: purpleIcon}).bindPopup('<b><a href="https://www.illinoisriverroad.org/places/united-states/illinois/havana/attractions/rockwell-mound/" target="_blank">Rockwell Mound</a></b><br>Built around A.D. 200, Rockwell Mound is one of the largest earthen mounds built by Native Americans in this part of Illinois. Unfortunately, today it is the location of a public park and has been altered by construction.<br><center><a title="Nyttend [Public domain]" href="https://commons.wikimedia.org/wiki/File:Rockwell_Mound_steps_from_south.jpg"><img width="75%" alt="Larger Native American earthen mound in middle of public park" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Rockwell_Mound_steps_from_south.jpg/512px-Rockwell_Mound_steps_from_south.jpg"></a></center>').addTo(prehistoric),
-
-	L.marker([37.606040, -89.185908], {icon: purpleIcon}).bindPopup('<b><a href="https://www.dnr.illinois.gov/NaturalResources/cultural/Documents/UnsolvedPrehistoryWallOfMystery.pdf" target="_blank">Giant City State Park</a></b><br>A popular hiking destination today, the park is also home to a Native American "stone fort" that was constructed around A.D. 700.<br><center><a title="By Tripp Creative Commons Attribution 2.0CC BY 2.0" href="https://commons.wikimedia.org/wiki/File:Giant_City_State_Park.jpg"><img width="75%" alt="Creek flowing by historic stone wall and trees" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Giant_City_State_Park.jpg/1200px-Giant_City_State_Park.jpg"></a></center>').addTo(prehistoric),
-
-	L.marker([37.468187, -88.688412], {icon: purpleIcon}).bindPopup('<b><a href="https://www.fs.usda.gov/Internet/FSE_DOCUMENTS/stelprd3833919.pdf" target="_blank">Millstone Bluff Archaeological Area</a></b><br>This unique site is the location of a Native American village that was built on top of a large rise in the landscape. It is also home to multiple rock art panels.<br><center><p><a href="https://commons.wikimedia.org/wiki/File:Millstone_Bluff_1.jpg#/media/File:Millstone_Bluff_1.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Millstone_Bluff_1.jpg/1200px-Millstone_Bluff_1.jpg" width="75%" alt="green forest with interpretive sign in foreground" title="By Daniel Schwen Own Work CC BY-SA 4.0"</a></center>').addTo(prehistoric),
-
-	L.marker([38.630599, -89.784541], {icon: purpleIcon}).bindPopup('<b><a href="https://en.wikipedia.org/wiki/Emerald_Mound_and_Village_Site" target="_blank">Emerald Mound</a></b><br>Located here is a smaller Native American mound site related to the larger Cohokia site near St. Louis. It is thought that Emerald Mounds was a religious center where Cahokians would come to perform ceremonies and other important religious activities.</a><br><center><a title="Nyttend [Public domain]" href="https://commons.wikimedia.org/wiki/File:Emerald_Mound_from_south.jpg"><img width="75%" alt="green agricultural fields with clump of trees and buildings in background" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Emerald_Mound_from_south.jpg/512px-Emerald_Mound_from_south.jpg"></a></center>').addTo(prehistoric);
-
-	var mbAttr = 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
-			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-		mbUrl = 'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYmV5ZXJhdXQiLCJhIjoiY2lnM3hhMGthMjc5NHRqbTNvMmdtbHR4YiJ9.dP5gGJ59Hly_pleCOGkzQw';
-
-	var grayscale   = L.tileLayer(mbUrl, {id: 'mapbox/light-v9', attribution: mbAttr, maxZoom: 9, minZoom: 6}),
-		streets  = L.tileLayer(mbUrl, {id: 'mapbox/streets-v11',   attribution: mbAttr, maxZoom: 9, minZoom: 6});
-
-	var map = L.map('map', {
-		center: [39.917159, -89.115146],
-		zoom: 6,
-		layers: [grayscale, historic, prehistoric]
-	});
-
-	var baseLayers = {
-		"Grayscale": grayscale,
-		"Streets": streets
-	};
-
-	var overlays = {
-		"Historic": historic,
-		"Prehistoric": prehistoric
-	};
-
-	L.control.layers(baseLayers, overlays).addTo(map);
-	L.control.scale().addTo(map);
 
 
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiYmV5ZXJhdXQiLCJhIjoiY2lnM3hhMGthMjc5NHRqbTNvMmdtbHR4YiJ9.dP5gGJ59Hly_pleCOGkzQw';
+var map = new mapboxgl.Map({
+    container: '<map>',
+    style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+    center: [-74.5, 40], // starting position [lng, lat]
+    zoom: 9 // starting zoom
+});
+</script>	
 
-</script>
 </div></center>
 </section>
 	
