@@ -267,7 +267,7 @@
 
   var popup = new mapboxgl.Popup({ offset: [0, -15] })
     .setLngLat(feature.geometry.coordinates)
-    .setHTML('<h4>' + feature.properties.title + '</h4><p>' + feature.properties.description + '</p>')
+    .setHTML('<h5>' + feature.properties.title + '</h5><p>' + feature.properties.description + '</p>')
     .addTo(map);
 });
     </script>
