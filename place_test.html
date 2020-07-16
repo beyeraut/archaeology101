@@ -246,12 +246,33 @@
 	
 <div id='map' style='width: 400px; height: 300px;'></div>
 <script>
-mapboxgl.accessToken = 'pk.eyJ1IjoiYmV5ZXJhdXQiLCJhIjoiY2lnM3hhMGthMjc5NHRqbTNvMmdtbHR4YiJ9.dP5gGJ59Hly_pleCOGkzQw';
+	mapboxgl.accessToken = 'pk.eyJ1IjoiYmV5ZXJhdXQiLCJhIjoiY2lnM3hhMGthMjc5NHRqbTNvMmdtbHR4YiJ9.dP5gGJ59Hly_pleCOGkzQw';
 var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
-    center: [-74.5, 40], // starting position [lng, lat]
-    zoom: 9 // starting zoom
+container: 'map',
+style: 'mapbox://styles/mapbox/light-v10',
+zoom: 13,
+center: [-122.447303, 37.753574]
+});
+ 
+map.on('load', function() {
+map.addSource('mapbox-terrain', {
+type: 'vector',
+url: 'mapbox://mapbox.mapbox-terrain-v2'
+});
+map.addLayer({
+'id': 'terrain-data',
+'type': 'line',
+'source': 'mapbox-terrain',
+'source-layer': 'contour',
+'layout': {
+'line-join': 'round',
+'line-cap': 'round'
+},
+'paint': {
+'line-color': '#ff69b4',
+'line-width': 1
+}
+});
 });
 </script>
 		
