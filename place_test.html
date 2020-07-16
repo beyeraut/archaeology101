@@ -244,47 +244,21 @@
 <!--MAP SECTION-->
 	<section style="padding: 0px 0px 30px 0px">
 		
-<style>
-#marker {
-background-image: url('https://docs.mapbox.com/mapbox-gl-js/assets/washington-monument.jpg');
-background-size: cover;
-width: 50px;
-height: 50px;
-border-radius: 50%;
-cursor: pointer;
-}
- 
-.mapboxgl-popup {
-max-width: 200px;
-}
-</style>
+    <div id='map' style='width:85%; height:600px;'></div>
+    <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYmV5ZXJhdXQiLCJhIjoiY2lnM3hhMGthMjc5NHRqbTNvMmdtbHR4YiJ9.dP5gGJ59Hly_pleCOGkzQw'; // replace this with your access token
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/beyeraut/ckcp5ehmi04ts1io9xon9zafs', // replace this with your style URL
+      center: [-95.877, 40.099],
+      zoom: 3
+    });
+    // code from the next step will go here
+    </script>
+		
+		
 	
-<div id='map' style='width:85%; height:600px;'></div>
-<script>
-	mapboxgl.accessToken = 'pk.eyJ1IjoiYmV5ZXJhdXQiLCJhIjoiY2lnM3hhMGthMjc5NHRqbTNvMmdtbHR4YiJ9.dP5gGJ59Hly_pleCOGkzQw';
-var map = new mapboxgl.Map({
-container: 'map',
-style: 'mapbox://styles/beyeraut/ckcp5ehmi04ts1io9xon9zafs',
-zoom: 3,
-center: [-95.877, 40.099]
-});
- 
-	// create the popup
-var popup = new mapboxgl.Popup({ offset: 25 }).setText(
-'Construction on the Washington Monument began in 1848.'
-);
- 
-// create DOM element for the marker
-var el = document.createElement('div');
-el.id = 'marker';
- 
-// create the marker
-new mapboxgl.Marker(el)
-.setLngLat(monument)
-.setPopup(popup) // sets a popup on this marker
-.addTo(map);
 
-</script>
 		
 </section>
 	
