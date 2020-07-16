@@ -268,9 +268,19 @@
   var popup = new mapboxgl.Popup({ offset: [0, -15] })
     .setLngLat(feature.geometry.coordinates)
     .setHTML('<h5>' + feature.properties.title + '</h5><p>' + feature.properties.description + '</p>')
-    .options.closeButton(true)
     .addTo(map);
 });
+
+var nav = new mapboxgl.NavigationControl();
+map.addControl(nav, 'top-left');
+	    
+var scale = new mapboxgl.ScaleControl({
+maxWidth: 80,
+unit: 'imperial'
+});
+map.addControl(scale);
+ 
+scale.setUnit('metric');
     </script>
 		
 		
