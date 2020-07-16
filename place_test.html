@@ -265,7 +265,7 @@
 
   var feature = features[0];
 
-  var popup = new mapboxgl.Popup(options.closeButton{ offset: [0, -15] })
+  var popup = new mapboxgl.Popup({options: closeButton(true)}{ offset: [0, -15] })
     .setLngLat(feature.geometry.coordinates)
     .setHTML('<h5>' + feature.properties.title + '</h5><p>' + feature.properties.description + '</p>')
     .addTo(map);
