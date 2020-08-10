@@ -239,7 +239,7 @@
   var popup = new mapboxgl.Popup({ offset: [0, -15], closeButton: [true], closeonClick: [true] })
     .setLngLat(feature.geometry.coordinates)
     .setMaxWidth("300px")
-    .setCursor: pointer;
+    .setCursor: (pointer)
     .setHTML('<h5>' + feature.properties.title + '</h5>')
     .addTo(map);
 });
