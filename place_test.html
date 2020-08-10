@@ -233,7 +233,7 @@ font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
 
   var feature = features[0];
 
-  var popup = new mapboxgl.Popup({ offset: [0, -15], closeButton: [true], closeonClick: [true] })
+  var popup = new mapboxgl.Popup({ offset: [0, -15], closeButton: [right], closeonClick: [true] })
     .setLngLat(feature.geometry.coordinates)
     .setMaxWidth("300px")
     .setHTML('<h5>' + feature.properties.title + '</h5>')
@@ -260,6 +260,40 @@ map.getCanvas().style.cursor = 'pointer';
 map.on('mouseleave', 'feature', function() {
 map.getCanvas().style.cursor = '';
 });
+	    
+	    // enumerate ids of the layers
+    var toggleableLayerIds = ['historic-archaeology101', 'prehistoric-archaeology101'];
+
+    // set up the corresponding toggle button for each layer
+    for (var i = 0; i < toggleableLayerIds.length; i++) {
+        var id = toggleableLayerIds[i];
+
+        var link = document.createElement('a');
+        link.href = '#';
+        link.className = 'active';
+        link.textContent = id;
+
+        link.onclick = function(e) {
+            var clickedLayer = this.textContent;
+            e.preventDefault();
+            e.stopPropagation();
+
+            var visibility = map.getLayoutProperty(clickedLayer, 'visibility');
+
+            // toggle layer visibility by changing the layout object's visibility property
+            if (visibility === 'visible') {
+                map.setLayoutProperty(clickedLayer, 'visibility', 'none');
+                this.className = '';
+            } else {
+                this.className = 'active';
+                map.setLayoutProperty(clickedLayer, 'visibility', 'visible');
+            }
+        };
+
+        var layers = document.getElementById('menu');
+        layers.appendChild(link);
+    }
+
 	    
     </script>
 		
