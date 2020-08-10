@@ -256,8 +256,7 @@
     // code from the next step will go here
 	    map.on('click', function(e) {
   var features = map.queryRenderedFeatures(e.point, {
-    layers: ['historic-archaeology101' + 
-	   'prehistoric-archaeology101'] // replace this with the name of the layer
+    layers: ['historic-archaeology101'] // replace this with the name of the layer
   });
 
   if (!features.length) {
