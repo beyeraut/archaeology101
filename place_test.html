@@ -212,7 +212,6 @@
 	<center><h3 style="padding: 0% 2% 2%">Public Archaeological Sites in the United States of America</h3></center>
 	
 	<p style="padding: 0% 2% 2%; font-size: 22px">Explore the map below to see some examples of archaeological sites and where they can be found throughout the United States of America. Click on the icons to reveal the name of each site. Many archaeological sites are also open to the public, so be sure to visit your local archaeological hotspots!</p>
-</center>	
 <!--MAP SECTION-->
 	<section style="padding: 0px 0px 30px 0px">
 		
@@ -237,7 +236,7 @@
 
   var feature = features[0];
 
-  var popup = new mapboxgl.Popup({ offset: [0, -15], closeButton: [true], closeonClick: [true] })
+  var popup = new mapboxgl.Popup({ offset: [0, -15], closeButton: ['top-right'], closeonClick: [true] })
     .setLngLat(feature.geometry.coordinates)
     .setMaxWidth("300px")
     .setHTML('<p>' + '&nbsp; &nbsp;' + '</p>' + '<h5>' + feature.properties.title + '</h5>')
@@ -266,7 +265,8 @@ scale.setUnit('metric');
 		
 </section>
 	
-	</div>
+	</div></center>	
+
 
 <!-- CATAGORIE Start-->
     <!-- ================================================= -->
