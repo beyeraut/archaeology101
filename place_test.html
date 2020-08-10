@@ -29,9 +29,9 @@
 
 <style>
 	.mapboxgl-popup {
-max-width: 400px;
-		cursor: pointer;
-		font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;}
+		max-width: 400px;
+		font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	}
 	
 	
 	</style>
@@ -239,6 +239,7 @@ max-width: 400px;
   var popup = new mapboxgl.Popup({ offset: [0, -15], closeButton: [true], closeonClick: [true] })
     .setLngLat(feature.geometry.coordinates)
     .setMaxWidth("300px")
+    .setCursor: pointer;
     .setHTML('<h5>' + feature.properties.title + '</h5>')
     .addTo(map);
 });
@@ -254,15 +255,7 @@ map.addControl(scale);
  
 scale.setUnit('metric');
 	    
-	    // Change the cursor to a pointer when the mouse is over the places layer.
-map.on('mouseenter', 'feature', function() {
-map.getCanvas().style.cursor = 'pointer';
-});
- 
-// Change it back to a pointer when it leaves.
-map.on('mouseleave', 'feature', function() {
-map.getCanvas().style.cursor = '';
-});
+
 	    
 
     
