@@ -233,11 +233,9 @@ font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
 
   var feature = features[0];
 
-  var popup = new mapboxgl.Popup({ offset: [0, -15] })
+  var popup = new mapboxgl.Popup({ offset: [0, -15], closeButton: [true], closeonClick: [true] })
     .setLngLat(feature.geometry.coordinates)
     .setMaxWidth("300px")
-    .setCloseButton(true)
-    .setCloseOnClick(true)
     .setHTML('<h5>' + feature.properties.title + '</h5>')
     .addTo(map);
 });
