@@ -6,18 +6,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 	<!-- Fonts -->
-	<!--<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>-->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-	
-	<!--<link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700' rel='stylesheet' type='text/css'>-->
 	<link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
 
 
 	<!-- Css -->
-	<!--<link rel="stylesheet" href="css/nivo-slider.css" type="text/css" />-->
-	<!--<link rel="stylesheet" href="css/owl.carousel.css">-->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<!--<link rel="stylesheet" href="css/font-awesome.min.css">-->	
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/responsive.css">
 
@@ -25,9 +19,6 @@
 	<!-- jS -->
 	<script src="js/jquery.min.js" type="text/javascript"></script>
 	<script src="js/bootstrap.min.js" type="text/javascript"></script>
-	<!--<script src="js/jquery.nivo.slider.js" type="text/javascript"></script>
-	<script src="js/owl.carousel.min.js" type="text/javascript"></script>-->
-	<!--<script src="js/jquery.nicescroll.js"></script>-->
 	<script src="js/jquery.scrollUp.min.js"></script>
 	<script src="js/main.js" type="text/javascript"></script>
 
@@ -85,23 +76,6 @@ font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
 					<li><a href="artifacts.html">ARTIFACTS</a></li>
 					<li><a href="resources.html">RESOURCES</a></li>
 					<li><a href="about.html">ABOUT</a></li>
-					<!--Dropdown Option
-					<li class="dropdown">
-						<a href="#">
-							PAGES
-							<span class="caret"></span>
-						</a>
-						<ul class="dropdown-menu">
-						   <li><a  href="#">Action</a></li>
-						    <li><a  href="#">Another action</a></li>
-						    <li><a  href="#">Something else here</a></li>
-						    <li><a  href="#">Separated link</a></li>
-						</ul>
-					</li> -->
-
-					<!-- End of /.dropdown -->
-
-
 		        </ul> <!-- End of /.nav-main -->
 		    </div>	<!-- /.navbar-collapse -->
 		</div>	<!-- /.container-fluid -->
@@ -158,7 +132,6 @@ font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
 	
 	<p style="padding: 0% 10% 2%; font-size: 22px">Besides lucky discoveries, there are also scientific methods that archaeologists use to actively find archaeological sites. One of the most common methods used is called <b>pedestrian survey</b>. During pedestrian survey, a group of archaeologists form a long line and walk slowly in the same direction, looking carefully for artifacts laying on the ground. If groups of artifacts are found during a pedestrian survey, then an archaeological site might be buried in that area. In areas where artifacts are less likely to be visible on the surface, archaeologists do a <b>shovel test survey</b>. During shovel test surveys, archaeologists dig a series of small round holes spaced at regular distances to find any buried archaeological deposits. Aside from survey, historic documents, like old maps, can also show the locations of homes, farmsteads, or even whole towns that no longer exist today.</p>
 	
-		<!--<div class="container">-->
 
 	
 	
@@ -225,15 +198,6 @@ font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
 	</p>
 	<p style="padding: 0% 10% 2%; font-size: 22px">While many archaeological sites have been found, there are still a lot that remain undiscovered or very little is known about them. New sites are being found regularly, helping to fill in gaps in our understanding of the past. Unfortunately, archaeological sites are also being destroyed by construction projects and other activities. Once they are gone, archaeological sites and the information they contain cannot be replaced, so it is important to protect archaeological sites when possible.</p>
 	
-	
-
-	<!--<section id="catagorie">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="block">
-							<p>Archaeology is all around you! This page will discuss where archaeological sites are and the variety of types of archaeological sites. This page will include a map with public archaeological sites in Illinois with pop-ups with short descriptions and a photo. An emphasis will be placed on archaeological sites near Springfield, IL to showcase that the students are surrounded by archaeology. Ten historic and ten prehistoric sites will be highlighted (and include an option to filter by site type).</p>
-					</div>	<!-- End of /.block -->
 				</div>	<!-- End of /.col-md-12 -->
 			</div>	<!-- End of /.row -->
 		</div>	<!-- End of /.container -->
@@ -243,7 +207,7 @@ font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
 	
 	<center><h3 style="padding: 0% 2% 2%">Public Archaeological Sites in the United States of America</h3></center>
 	
-	<p style="padding: 0% 2% 2%; font-size: 22px">Explore the map below to see some examples of archaeological sites and where they can be found throughout the United States of America. Click on the icons to reveal a brief description of each site. Many archaeological sites are also open to the public, so be sure to visit your local archaeological hotspots!</p>
+	<p style="padding: 0% 2% 2%; font-size: 22px">Explore the map below to see some examples of archaeological sites and where they can be found throughout the United States of America. Click on the icons to reveal the name of each site. Many archaeological sites are also open to the public, so be sure to visit your local archaeological hotspots!</p>
 	
 <!--MAP SECTION-->
 	<section style="padding: 0px 0px 30px 0px">
@@ -271,6 +235,8 @@ font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
 
   var popup = new mapboxgl.Popup({ offset: [0, -15] })
     .setLngLat(feature.geometry.coordinates)
+    .setMaxWidth("300px")
+    .options.closeButton(true)
     .setHTML('<h5>' + feature.properties.title + '</h5>')
     .addTo(map);
 });
