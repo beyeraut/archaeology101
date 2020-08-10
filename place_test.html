@@ -254,11 +254,8 @@ map.addControl(scale);
  
 scale.setUnit('metric');
 	    
-	    var overlays = {
-		"Prehistoric": prehistoric-archaeology101,
-		"Historic": historic-archaeology101
-	    }
-L.control.layers(overlays).addTo(map);
+	
+L.control.layers(features).addTo(map);
 	    
 
     
