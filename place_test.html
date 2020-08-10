@@ -236,10 +236,10 @@
 
   var feature = features[0];
 
-  var popup = new mapboxgl.Popup({ offset: [0, -15], closeButton: [true], closeonClick: [true] })
+  var popup = new mapboxgl.Popup({ offset: [0, -15], closeButton: [false], closeonClick: [true] })
     .setLngLat(feature.geometry.coordinates)
     .setMaxWidth("300px")
-    .setHTML('<p>' + '&nbsp;' + '</p>' + '<h5>' + feature.properties.title + '</h5>')
+    .setHTML('<p>' + '&nbsp; &nbsp;' + '</p>' + '<h5>' + feature.properties.title + '</h5>')
     .addTo(map);
 });
 
