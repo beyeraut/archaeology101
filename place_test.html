@@ -220,6 +220,8 @@
 <!--MAP SECTION-->
 	<section style="padding: 0px 0px 30px 0px">
 		
+		
+		
     <div id='map' style='width:85%; height:600px;'></div>
     <script>
     mapboxgl.accessToken = 'pk.eyJ1IjoiYmV5ZXJhdXQiLCJhIjoiY2lnM3hhMGthMjc5NHRqbTNvMmdtbHR4YiJ9.dP5gGJ59Hly_pleCOGkzQw'; // replace this with your access token
@@ -228,7 +230,11 @@
       style: 'mapbox://styles/beyeraut/ckcp5ehmi04ts1io9xon9zafs', // replace this with your style URL
       center: [-95.877, 40.099],
       zoom: 3
-    });
+    })
+    .setMaxZoom(8);
+	    });
+	    
+	    
     // code from the next step will go here
 	    map.on('click', function(e) {
   var features = map.queryRenderedFeatures(e.point, {
