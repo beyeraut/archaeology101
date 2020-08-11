@@ -243,6 +243,23 @@
 	<center><h3 style="padding: 0% 2% 2%">Title</h3></center>
 	<p style="padding: 0% 2% 2%; font-size: 22px"></p>
 	
+	  <canvas id="demoCanvas" width="500" height="300"></canvas>
+<script>
+  function init() {
+    // code here.
+	  var stage = new createjs.Stage("demoCanvas");
+
+	  var circle = new createjs.Shape();
+circle.graphics.beginFill("DeepSkyBlue").drawCircle(0, 0, 50);
+circle.x = 100;
+circle.y = 100;
+stage.addChild(circle);
+  }
+	
+	stage.update();
+
+	
+</script>
 
 	</div>
 	
