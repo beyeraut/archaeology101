@@ -37,13 +37,21 @@
 	<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
 
 
-      <style>
-        
-      </style>
+      
+         <script>      
+      function init() {
+        var stage = new createjs.Stage("demoCanvas");
+        var circle = new createjs.Shape();
+        circle.graphics.beginFill("DeepSkyBlue").drawCircle(0, 0, 50);
+        circle.x = 100;
+        circle.y = 100;
+        stage.addChild(circle);
+        stage.update();
+      }
+    </script>
+      
 
-      <script>
-        
-	</script>
+     
 </head>
 <body>
 
@@ -207,7 +215,6 @@
 	
 	<p style="padding: 0% 10% 2%; font-size: 22px">As mentioned above, a critical part of archaeology is taking notes. Since we cannot dig the same test unit twice, archaeologists take detailed notes of everything we do so that future archaeologists can recreate excavations and find exactly where specific artifacts were found. Note-taking begins before digging even starts, as we first write a summary of our goals and plans for the specific excavation being done. We also draw a map of where our test unit is located within a site. Once excavation starts, we take detailed notes about what types of artifacts we are finding. In addition, we note any changes in soil color, which can be caused by humans digging to build homes, creating food storage areas, making and using fire pits, or other activities. After taking notes, we then make maps for each individual level within a test unit that shows exactly where artifacts were being found or where soil color changes occurred.</p>
 	<p style="padding: 0% 10% 2%; font-size: 22px">We dig slowly and continue taking notes until no more artifacts or soil changes are found. At that point, we stop digging and make detailed maps of each wall of the test unit, called <b>profile drawings</b>. Profile drawings show how soils changed as we got deeper into the ground and can help us to understand how soil changes relate to each other, as well as which soil layers held artifacts and which did not. At the end of a test unit, we will also write a summary of what we found and our ideas for what this evidence might tell us about the past. We then take all of the artifacts and field notes back to the lab to be cleaned, organized, counted, and weighed.</p>
-	<p style="padding: 0% 10% 2%; font-size: 22px"><b>Sketch map activity?</b><p/>
 </div>
 
 
@@ -236,29 +243,14 @@
 	
 </div>
 
-<canvas id="demoCanvas" width="500" height="300"></canvas>
-<script>
-  function init() {
-    // code here.
-	  var stage = new createjs.Stage("demoCanvas");
 
-	  var circle = new createjs.Shape();
-circle.graphics.beginFill("DeepSkyBlue").drawCircle(0, 0, 50);
-circle.x = 100;
-circle.y = 100;
-stage.addChild(circle);
-  }
-	
-	stage.update();
-
-	
-</script>
 
 <center><div  style="width:70%; height:auto; border: 6px solid #90C322; background-color: HoneyDew">
-	<center><h3 style="padding: 0% 2% 2%">Title</h3></center>
+	<center><h3 style="padding: 0% 2% 2%">Sketch Map Activity</h3></center>
 	<p style="padding: 0% 2% 2%; font-size: 22px"></p>
 	
-	  
+	  <canvas id="demoCanvas" width="500" height="300"></canvas>
+
 
 	</div>
 	
